@@ -8,13 +8,14 @@ Etude Odoo V11 Opérations
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Table des matières
+   :name: mastertoc
 
+   intro
+   Maintenance de cette documentation <./readthedocs/maintenance>
 
 
 Index et Tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`

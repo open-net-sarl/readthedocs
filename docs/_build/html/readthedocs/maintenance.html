@@ -1,0 +1,254 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Maintenance de la documentation &#8212; Documentation Etude Odoo V11 Opérations 0.1</title>
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="prev" title="Intro" href="../intro.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../intro.html" title="Intro"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation Etude Odoo V11 Opérations 0.1</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Maintenance de la documentation</a><ul>
+<li><a class="reference internal" href="#fonctionnement-de-la-chaine-d-edition-read-the-docs">Fonctionnement de la chaîne d’édition «&nbsp;Read the Docs&nbsp;»</a></li>
+<li><a class="reference internal" href="#prerequis">Prérequis</a><ul>
+<li><a class="reference internal" href="#complements">Compléments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mise-en-place-d-une-nouvelle-documentation">Mise en place d’une nouvelle documentation</a></li>
+<li><a class="reference internal" href="#installation-du-systeme-pour-l-edition-locale">Installation du système pour l’édition locale</a></li>
+<li><a class="reference internal" href="#diverses-sources-d-information">Diverses sources d’information</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="../intro.html"
+                        title="Chapitre précédent">Intro</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/readthedocs/maintenance.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="maintenance-de-la-documentation">
+<h1>Maintenance de la documentation<a class="headerlink" href="#maintenance-de-la-documentation" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="fonctionnement-de-la-chaine-d-edition-read-the-docs">
+<h2>Fonctionnement de la chaîne d’édition «&nbsp;Read the Docs&nbsp;»<a class="headerlink" href="#fonctionnement-de-la-chaine-d-edition-read-the-docs" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Le système ReadtheDocs permet l’édition <strong>en continu</strong> d’une documentation <strong>en ligne</strong>, avec notamment :</p>
+<ul class="last simple">
+<li>un système de recherche intégré</li>
+<li>une édition simplifiée</li>
+<li>une mise en forme structurée et rigide (idéale pour des documents techniques)</li>
+<li>une gestion de plusieurs version</li>
+<li>multilangue</li>
+</ul>
+</div>
+<ul class="simple">
+<li>Les fichiers sources sont stockés dans un répertoire de <a class="reference external" href="https://github.com">Github.com</a>.</li>
+<li>Ils sont écrits en language reStructuredText (extension .rst)</li>
+<li>Un <a class="reference external" href="https://en.wikipedia.org/wiki/Webhook">webhook</a> est établi entre <a class="reference external" href="https://readthedocs.org">Read the Docs</a> et les fichiers sources sous Github.com.</li>
+<li>A chaque changement d’un fichier source, le webhook active la régénéraion du site en ligne.</li>
+</ul>
+</div>
+<div class="section" id="prerequis">
+<h2>Prérequis<a class="headerlink" href="#prerequis" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li>Disposer d’une compte chez <a class="reference external" href="https://github.com">Github.com</a> (ou similaire)</li>
+<li>Disposer d’un compte chez <a class="reference external" href="https://readthedocs.org">Read the Docs</a> connecté aux sources du compte Github.</li>
+</ul>
+<div class="section" id="complements">
+<h3>Compléments<a class="headerlink" href="#complements" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Afin d’assurer un meilleur confort d’édition, les logiciels ci-après peuvent être installés en complément :</p>
+<ul class="simple">
+<li>Un éditeur de code (<a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> dans notre cas)</li>
+<li>Le moteur d’édition <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>, qui est le moteur de génération de ReadTheDocs.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="mise-en-place-d-une-nouvelle-documentation">
+<h2>Mise en place d’une nouvelle documentation<a class="headerlink" href="#mise-en-place-d-une-nouvelle-documentation" title="Lien permanent vers ce titre">¶</a></h2>
+<ul>
+<li><p class="first">Sous Github</p>
+<ul class="simple">
+<li>Créer un repository sous Github</li>
+<li>relever <abbr title="par exemple : https://github.com/open-net-sarl/readthedocs.git">l’URL de celui-ci</abbr>.</li>
+</ul>
+</li>
+<li><p class="first">Sous Read the Docs</p>
+<ul class="simple">
+<li>Cliquer <strong>Import a Project</strong> et sélectionner un Repository</li>
+<li>Cliquer <strong>Admin &gt; Settings</strong>. Vérifier l’URL du champ «&nbsp;Repository URL&nbsp;».</li>
+<li>Adapter les autres champs en fonction du besoin, notamment l’édition au format PDF ou ePub, en plus de HTML</li>
+<li>Cliquer <strong>Admin &gt; Settings &gt; Advanced Settings</strong>. Vérifier le niveau de confidentialité sous «&nbsp;Privacy Level&nbsp;».</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Cette installation minimale permet déjà de créer une documentation en ligne en éditant des fichier <abbr title="restructuredText">.rst</abbr> directement sous Github.</p>
+<p>Ceci constitue toutefois une solution peu élégante. D’autre part, le résultat de la conversion des fichiers .rst vers html par ReadtheDocs est assez lente.</p>
+<p class="last">Afin de travailler dans de meilleures conditions, nous allons procéder en complément à l’installation d’un éditeur de code connecté à Github, ainsi qu’à l’installation du moteur de génération de documentation identique à celui de ReadtheDocs <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="installation-du-systeme-pour-l-edition-locale">
+<h2>Installation du système pour l’édition locale<a class="headerlink" href="#installation-du-systeme-pour-l-edition-locale" title="Lien permanent vers ce titre">¶</a></h2>
+<ul>
+<li><p class="first">Installation du moteur <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Sphinx a besoin de Python pour fonctionner. Sous Windows, l’installation de Anaconda constitue probablement l’option la plus simple.</p>
+</div>
+<ul>
+<li><p class="first">Télécharger et installer <a class="reference external" href="https://repo.anaconda.com/archive/Anaconda2-5.2.0-Windows-x86_64.exe">Anaconda</a></p>
+</li>
+<li><p class="first">Ouvrir la console «&nbsp;Anaconda Prompt&nbsp;»</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">sphinx</span>    <span class="c1"># Installation de Sphinx</span>
+</pre></div>
+</div>
+<p>Pour générer un nouveau projet :</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">project</span><span class="o">/</span>
+<span class="n">mkdir</span> <span class="n">docs</span>
+<span class="n">cd</span> <span class="n">docs</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+<span class="c1"># Répondre aux questions en validant les valeurs proposée en cas de doute, il est possible de reconfigurer le projet ultérieurement.</span>
+<span class="c1"># Vous obtiendrez un fichier de configuration de base conf.py et</span>
+<span class="c1"># un document d&#39;index basique, mais fonctionnel et prêt à être édité.</span>
+</pre></div>
+</div>
+<p>Pour générer le site html à partir des sources existantes :</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># pour générer les documents en html :</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">docs</span>
+<span class="n">make</span> <span class="n">html</span>
+<span class="c1"># un dossier _build existe dorénavant, avec les fichiers sources du site html</span>
+<span class="c1"># vous pouvez consulter le site généré en local sous &#39;file:///path/to/project/docs/_build/html/index.html</span>
+</pre></div>
+</div>
+<p>Optionnel : pour automatiser la régénération de la documentation html à chaque modification d’un fichier source :</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># installer les modules nécessaires</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span>
+<span class="c1"># initialiser la régénération automatique</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">autobuild</span> <span class="o">.</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+<span class="c1"># Dès maintenant, il suffit de raffraîchir la page du navigateur (CTRL+F5) pour oubtenir la nouvelle version après quelques secondes.</span>
+<span class="c1"># interrompre cet automatisme avec CTRL+C</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first">Sous VSCode</p>
+<ul>
+<li><p class="first">Installer le contrôle de code source git au besoin</p>
+</li>
+<li><p class="first">Créer un répertoire pour les documents de projet en local</p>
+</li>
+<li><p class="first">Initialiser le <a class="reference external" href="https://www.youtube.com/watch?v=6n1G45kpU2o">répertoire pour git</a>.</p>
+</li>
+<li><p class="first">Connecter le git local au <a class="reference external" href="https://stackoverflow.com/a/43364619">git distant</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/myProject/
+git remote add origin https://...
+git remote show origin <span class="c1"># if everything is ok, you will see your remote</span>
+git push -u origin master <span class="c1"># assuming your are on the master branch.</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
+<p class="last">Ne pas oublier de pousser les modifications régulièrement vers Github, sans quoi le site online ne sera pas mis à jour.</p>
+</div>
+</div>
+<div class="section" id="diverses-sources-d-information">
+<h2>Diverses sources d’information<a class="headerlink" href="#diverses-sources-d-information" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li>Sphinx - <a class="reference external" href="http://www.sphinx-doc.org/en/stable/contents.html">Documentation officielle</a></li>
+<li>Read the Docs - <a class="reference external" href="http://docs.readthedocs.io/en/latest/getting_started.html">Documentation officielle</a></li>
+<li>restructuredText<ul>
+<li><a class="reference external" href="http://draft-edx-style-guide.readthedocs.io/en/latest/ExampleRSTFile.html">Documentation edX très complète</a></li>
+<li><a class="reference external" href="http://udig.refractions.net/files/docs/latest/user/docguide/sphinxSyntax.html">Documentation succinte</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="../intro.html" title="Intro"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation Etude Odoo V11 Opérations 0.1</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Didier Stadelmann.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+    </div>
+  </body>
+</html>
