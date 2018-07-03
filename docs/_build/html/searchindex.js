@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["index"],envversion:52,filenames:["index.rst"],objects:{},objnames:{},objtypes:{},terms:{index:[],modul:0,pag:0,recherch:0},titles:["Etude Odoo V11 Op\u00e9rations"],titleterms:{and:[],document:[],etud:0,index:0,indic:[],odoo:0,oper:0,tabl:0,v11:0,welcom:[]}})
