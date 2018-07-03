@@ -12,7 +12,7 @@ Fonctionnement de la chaîne d'édition "Read the Docs"
    * un système de recherche intégré
    * une édition simplifiée
    * une mise en forme structurée et rigide (idéale pour des documents techniques)
-   * une gestion de plusieurs version
+   * une gestion de plusieurs versions
    * multilangue
 
 * Les fichiers sources sont stockés dans un répertoire de `Github.com <https://github.com>`_.
