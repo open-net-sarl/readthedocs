@@ -16,7 +16,7 @@ Fonctionnement de la chaîne d'édition "Read the Docs"
    * multilangue
 
 * Les fichiers sources sont stockés dans un répertoire de `Github.com <https://github.com>`_.
-* Ils sont écrits en language reStructuredText (extension .rst)
+* Ils sont écrits en language reStructuredText (extension .rst).
 * Un `webhook <https://en.wikipedia.org/wiki/Webhook>`_ est établi entre `Read the Docs <https://readthedocs.org>`_ et les fichiers sources sous Github.com.
 * A chaque changement d'un fichier source, le webhook active la régénéraion du site en ligne.
 
