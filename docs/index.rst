@@ -11,11 +11,6 @@ Etude Odoo V11 Opérations
    :caption: Table des matières
    :name: mastertoc
 
-   intro
+   Introduction <./intro>
    Maintenance de cette documentation <./readthedocs/maintenance>
 
-
-Index et Tables
-==================
-
-* :ref:`search`
