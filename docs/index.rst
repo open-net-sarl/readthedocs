@@ -13,4 +13,4 @@ Etude Odoo V11 Opérations
 
    Introduction <./intro>
    Maintenance de cette documentation <./readthedocs/maintenance>
-
+   glossary

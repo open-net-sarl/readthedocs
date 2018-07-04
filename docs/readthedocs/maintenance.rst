@@ -3,19 +3,25 @@ Maintenance de la documentation
 ###############################
 
 =====================================================
-Fonctionnement de la chaîne d'édition "Read the Docs"
+Fonctionnement de la chaîne d'édition 
 =====================================================
 
+   .. figure:: ../img/rtd_logo_sm.jpg
+      :scale: 70%
+      :alt: logo ReadtheDocs
+      :align: center
+      :target: https://readthedocs.org
+
 .. note::
-   Le système ReadtheDocs permet l'édition **en continu** d'une documentation **en ligne**, avec notamment :
+   Le système :term:`"Read the Docs"<Read the Docs>` permet l'édition **en continu** d'une documentation **en ligne**, avec notamment :
 
    * un système de recherche intégré
    * une édition simplifiée
    * une mise en forme structurée et rigide (idéale pour des documents techniques)
    * une gestion de plusieurs versions
-   * multilangue
+   * une édition en plusieurs langues
 
-* Les fichiers sources sont stockés dans un répertoire de `Github.com <https://github.com>`_.
+* Les fichiers sources sont stockés dans un répertoire de :term:`Github.com <github>`.
 * Ils sont écrits en language reStructuredText (extension .rst).
 * Un `webhook <https://en.wikipedia.org/wiki/Webhook>`_ est établi entre `Read the Docs <https://readthedocs.org>`_ et les fichiers sources sous Github.com.
 * A chaque changement d'un fichier source, le webhook active la régénéraion du site en ligne.
@@ -124,14 +130,3 @@ Installation du système pour l'édition locale
 .. warning::
     Ne pas oublier de pousser les modifications régulièrement vers Github, sans quoi le site online ne sera pas mis à jour.
 
-================================================================
-Diverses sources d'information
-================================================================ 
-
-* Sphinx - `Documentation officielle <http://www.sphinx-doc.org/en/stable/contents.html>`_
-* Read the Docs - `Documentation officielle <http://docs.readthedocs.io/en/latest/getting_started.html>`_
-
-* restructuredText
-
-  * `Documentation edX très complète <http://draft-edx-style-guide.readthedocs.io/en/latest/ExampleRSTFile.html>`_
-  * `Documentation succinte <http://udig.refractions.net/files/docs/latest/user/docguide/sphinxSyntax.html>`_
