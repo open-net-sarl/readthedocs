@@ -13,7 +13,7 @@ Fonctionnement de la chaîne d'édition
       :target: https://readthedocs.org
 
 .. note::
-   Le système :term:`"Read the Docs"<Read the Docs>` permet l'édition **en continu** d'une documentation **en ligne**, avec notamment :
+   Cette documentation est générée et hébergée par le site :term:`"Read the Docs"<Read the Docs>`, qui permet sa mise à jour **en continu**, avec notamment les caractéristiques suivantes:
 
    * un système de recherche intégré
    * une édition simplifiée
@@ -22,31 +22,31 @@ Fonctionnement de la chaîne d'édition
    * une édition en plusieurs langues
 
 * Les fichiers sources sont stockés dans un répertoire de :term:`Github.com <github>`.
-* Ils sont écrits en language reStructuredText (extension .rst).
-* Un `webhook <https://en.wikipedia.org/wiki/Webhook>`_ est établi entre `Read the Docs <https://readthedocs.org>`_ et les fichiers sources sous Github.com.
-* A chaque changement d'un fichier source, le webhook active la régénéraion du site en ligne.
+* Ils sont écrits en language :term:`reStructuredText <RST>` (extension .rst).
+* Un :term:`webhook<webhook>` est établi entre :term:`"Read the Docs"<Read the Docs>` et les fichiers sources sous :term:`Github.com <github>`.
+* A chaque changement d'un fichier source, le :term:`webhook<webhook>` active la régénéraion du site en ligne.
 
 ============
 Prérequis
 ============
 
-* Disposer d'une compte chez `Github.com <https://github.com>`_ (ou similaire)
-* Disposer d'un compte chez `Read the Docs <https://readthedocs.org>`_ connecté aux sources du compte Github.
+* Disposer d'une compte chez :term:`Github.com <github>` (ou similaire)
+* Disposer d'un compte chez :term:`"Read the Docs"<Read the Docs>` connecté aux sources du compte :term:`Github.com <github>`.
 
 Compléments
 -----------
 Afin d'assurer un meilleur confort d'édition, les logiciels ci-après peuvent être installés en complément :
 
-* Un éditeur de code (`Visual Studio Code <https://code.visualstudio.com/>`_ dans notre cas)
-* Le moteur d'édition `Sphinx <http://www.sphinx-doc.org/en/master/>`_, qui est le moteur de génération de ReadTheDocs.
+* Un éditeur de code (:term:`Visual Studio Code` dans notre cas)
+* Le moteur d'édition :term:`Sphinx <sphinx>`, qui est le moteur de génération de :term:`"Read the Docs"<Read the Docs>`.
 
 ==========================================
 Mise en place d'une nouvelle documentation
 ==========================================
 
-* Sous Github
+* Sous :term:`Github.com <github>`
 
-  * Créer un repository sous Github
+  * Créer un repository sous :term:`Github.com <github>`
   * relever :abbr:`l'URL de celui-ci (par exemple : https://github.com/open-net-sarl/readthedocs.git)`.
 
 * Sous Read the Docs
@@ -57,22 +57,22 @@ Mise en place d'une nouvelle documentation
   * Cliquer **Admin > Settings > Advanced Settings**. Vérifier le niveau de confidentialité sous "Privacy Level".
 
   .. note::
-     Cette installation minimale permet déjà de créer une documentation en ligne en éditant des fichier :abbr:`.rst (restructuredText)` directement sous Github.
+     Cette installation minimale permet déjà de créer une documentation en ligne en éditant des fichier :abbr:`.rst (restructuredText)` directement sous :term:`Github.com <github>`.
      
-     Ceci constitue toutefois une solution peu élégante. D'autre part, le résultat de la conversion des fichiers .rst vers html par ReadtheDocs est assez lente.
+     Ceci constitue toutefois une solution peu élégante. D'autre part, le résultat de la conversion des fichiers .rst vers html par :term:`"Read the Docs"<Read the Docs>` est assez lente.
 
-     Afin de travailler dans de meilleures conditions, nous allons procéder en complément à l'installation d'un éditeur de code connecté à Github, ainsi qu'à l'installation du moteur de génération de documentation identique à celui de ReadtheDocs `Sphinx <http://www.sphinx-doc.org/en/master/>`_.   
+     Afin de travailler dans de meilleures conditions, nous allons procéder en complément à l'installation d'un éditeur de code connecté à :term:`Github.com <github>`, ainsi qu'à l'installation du moteur de génération de documentation :term:`Sphinx <sphinx>` (qui est identique à celui de :term:`"Read the Docs"<Read the Docs>`).   
 
 =============================================
 Installation du système pour l'édition locale
 =============================================
 
-* Installation du moteur `Sphinx <http://www.sphinx-doc.org/en/master/>`_
+* Installation du moteur :term:`Sphinx <sphinx>`
 
   .. note::
-     Sphinx a besoin de Python pour fonctionner. Sous Windows, l'installation de Anaconda constitue probablement l'option la plus simple.
+     :term:`Sphinx <sphinx>` a besoin de Python pour fonctionner. Sous Windows, l'installation de :term:`Anaconda <anaconda>` constitue probablement l'option la plus simple.
 
-  * Télécharger et installer `Anaconda <https://repo.anaconda.com/archive/Anaconda2-5.2.0-Windows-x86_64.exe>`_
+  * Télécharger et installer :term:`Anaconda <anaconda>`
   * Ouvrir la console "Anaconda Prompt"
 
     .. code-block:: Python
@@ -113,7 +113,7 @@ Installation du système pour l'édition locale
         # interrompre cet automatisme avec CTRL+C
 
 
-* Sous VSCode
+* Sous :term:`Visual Studio Code`
 
   * Installer le contrôle de code source git au besoin
   * Créer un répertoire pour les documents de projet en local
@@ -128,5 +128,5 @@ Installation du système pour l'édition locale
         git push -u origin master # assuming your are on the master branch.
 
 .. warning::
-    Ne pas oublier de pousser les modifications régulièrement vers Github, sans quoi le site online ne sera pas mis à jour.
+    Ne pas oublier de pousser les modifications régulièrement vers :term:`Github.com <github>`, sans quoi le site online ne sera pas mis à jour.
 
