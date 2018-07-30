@@ -10,7 +10,7 @@ Fonctionnement de la chaîne d'édition
       :scale: 70%
       :alt: logo ReadtheDocs
       :align: center
-      :target: https://readthedocs.org
+      :target: https://readthedocs.org     
 
 .. note::
    Cette documentation est générée et hébergée par le site :term:`"Read the Docs"<Read the Docs>`, qui permet sa mise à jour **en continu**, avec notamment les caractéristiques suivantes:

@@ -1,0 +1,5 @@
+id;code;name;sequence;time_efficiency;time_stop;time_start;resource_calendar_id/id;capacity;color;costs_hour;oee_target;note
+obsf_mrp_workcenter.ASSYVE;ASSYVE;Assemblage des vélos;1;100;0;0;resource.resource_calendar_std;1;0;120;90;Assemblage de l'ensembles des éléments du vélo, sauf les freins
+obsf_mrp_workcenter.ASSYFR;ASSYFR;Assemblage des freins;1;100;0;0;resource.resource_calendar_std;1;0;140;90;Assemblage des freins uniquement
+obsf_mrp_workcenter.USIFRE;USIFRE;Usinage de freins;1;100;0;0;resource.resource_calendar_std;1;0;210;90;
+obsf_mrp_workcenter.MAROQ;MAROQ;Maroquinerie;1;100;0;0;resource.resource_calendar_std;1;0;85;90;
