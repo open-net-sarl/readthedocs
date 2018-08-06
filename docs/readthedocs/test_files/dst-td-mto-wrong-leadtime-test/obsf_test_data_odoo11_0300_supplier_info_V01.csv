@@ -1,0 +1,2 @@
+id,product_tmpl_id/id,name/id,,,currency_id/id,delay,date_start,date_end,min_qty,price,product_code
+obsf_product_supplier_info.SEMI-0102_CADIND_V01,obsf_product_template.SEMI-0102,obsf_res_partner.CADIND,SEMI-0102,CADIND,base.CHF,80,,,20,120,CADIND-497

@@ -1,0 +1,13 @@
+id,,company_id/id,exhausted,location_id/id,product_id/id,name
+stock_inventory.S1_N0_MTO,S1_N0_MTO,base.main_company,False,stock.stock_location_stock,obsf_product_template.S1_N0_MTO,Initial Stock [S1_N0_MTO]
+stock_inventory.S2_N0_MTS,S2_N0_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S2_N0_MTS,Initial Stock [S2_N0_MTS]
+stock_inventory.S3_N0_MTO-MTO_MTS,S3_N0_MTO-MTO_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S3_N0_MTO-MTO_MTS,Initial Stock [S3_N0_MTO-MTO_MTS]
+stock_inventory.S4_N0_MTS-MTO_MTS,S4_N0_MTS-MTO_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S4_N0_MTS-MTO_MTS,Initial Stock [S4_N0_MTS-MTO_MTS]
+stock_inventory.S5_N0_MTO-MTO_MTS,S5_N0_MTO-MTO_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S5_N0_MTO-MTO_MTS,Initial Stock [S5_N0_MTO-MTO_MTS]
+stock_inventory.S6_N0_MTS-MTO_MTS,S6_N0_MTS-MTO_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S6_N0_MTS-MTO_MTS,Initial Stock [S6_N0_MTS-MTO_MTS]
+stock_inventory.S1_N1_MTO-MTO_MTS,S1_N1_MTO-MTO_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S1_N1_MTO-MTO_MTS,Initial Stock [S1_N1_MTO-MTO_MTS]
+stock_inventory.S2_N1_MTO-MTO_MTS,S2_N1_MTO-MTO_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S2_N1_MTO-MTO_MTS,Initial Stock [S2_N1_MTO-MTO_MTS]
+stock_inventory.S3_N1_MTO-MTO_MTS,S3_N1_MTO-MTO_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S3_N1_MTO-MTO_MTS,Initial Stock [S3_N1_MTO-MTO_MTS]
+stock_inventory.S4_N1_MTS-MTO_MTS,S4_N1_MTS-MTO_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S4_N1_MTS-MTO_MTS,Initial Stock [S4_N1_MTS-MTO_MTS]
+stock_inventory.S5_N1_MTO,S5_N1_MTO,base.main_company,False,stock.stock_location_stock,obsf_product_template.S5_N1_MTO,Initial Stock [S5_N1_MTO]
+stock_inventory.S6_N1_MTS,S6_N1_MTS,base.main_company,False,stock.stock_location_stock,obsf_product_template.S6_N1_MTS,Initial Stock [S6_N1_MTS]

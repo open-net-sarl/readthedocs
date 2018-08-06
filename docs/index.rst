@@ -11,8 +11,10 @@ Etude Odoo V11 Opérations
    :caption: Table des matières
    :name: mastertoc
 
-   Introduction <./intro>
-   Les opérations <./readthedocs/operations>
-   Etude <./readthedocs/study>
-   Maintenance de cette documentation <./readthedocs/maintenance>
-   Glossaire <./glossary>
+   intro
+   readthedocs/operations
+   readthedocs/study
+   readthedocs/solutions
+   readthedocs/maintenance
+   glossary
+   licence

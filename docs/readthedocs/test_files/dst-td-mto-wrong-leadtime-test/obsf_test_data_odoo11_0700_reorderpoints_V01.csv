@@ -1,0 +1,4 @@
+id,,company_id/id,lead_days,lead_type,location_id/id,product_max_qty,product_min_qty,name,group_id/id,product_id/id,qty_multiple,warehouse_id/id
+obsf_stock_warehouse_orderpoint.FINI-0001,FINI-0001,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,0,0,OP/FINI-0001/01,,obsf_product_template.FINI-0001,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0100,SEMI-0100,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,0,0,OP/SEMI-0100/01,,obsf_product_template.SEMI-0100,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0102,SEMI-0102,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,0,0,OP/SEMI-0102/01,,obsf_product_template.SEMI-0102,1,stock.warehouse0

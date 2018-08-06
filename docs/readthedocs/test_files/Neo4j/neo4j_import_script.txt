@@ -1,0 +1,58 @@
+// Import procedure into Neo4j
+// Ref : https://neo4j.com/developer/guide-importing-data-and-etl/#_importing_the_data_using_cypher
+//
+// Commands : type "C:\Users\Didier\OneDrive\Documents\ESIG_Delemont\Stage_Diplome\Projet\DocProjetReadTheDocs\ESIG_TD_DS\docs\readthedocs\test_files\Neo4j\neo4j_import_script.txt" | C:\Users\Didier\.Neo4jDesktop\neo4jDatabases\database-b0a56bf7-362c-41b9-a5de-0759590a6b9d\installation-3.4.1\bin\cypher-shell.bat -u dstadel -p stdi5757?
+
+// Clear the database
+MATCH (n) DETACH DELETE n;
+
+// Create Products
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "file:///obsf_test_data_odoo11_0100_product_template_V01.csv" AS row
+FIELDTERMINATOR ';'
+MERGE (product:Product {id: row.id})
+ON CREATE SET 	product.code = row.default_code,
+				product.name = row.name;
+
+// Create Partners
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "file:///obsf_test_data_odoo11_0200_res_partner_V01.csv" AS row
+FIELDTERMINATOR ';'
+MERGE (partner:Partner {id: row.id})
+ON CREATE SET 	partner.name = row.name,
+				partner.isCustomer = row.customer,
+				partner.isSupplier = row.supplier;
+
+// Create WorkCenters
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "file:///obsf_test_data_odoo11_0400_workcenters_V01.csv" AS row
+FIELDTERMINATOR ','
+MERGE (w:Workcenter {id: row.id})
+ON CREATE SET	w.name = row.name,
+				w.capacity = toFloat(row.capacity),
+				w.costHour = toFloat(row.costs_hour),
+				w.note = row.note;
+
+// Create indexes
+CREATE INDEX ON :Product(id);
+CREATE INDEX ON :Product(name);
+CREATE INDEX ON :Partner(id);
+CREATE INDEX ON :Partner(name);
+CREATE INDEX ON :Workcenter(id);
+CREATE INDEX ON :Workcenter(name);
+
+schema await
+
+// Remarque : to delete relations : MATCH ()-[n:SUPPLIES]->() DETACH DELETE n
+
+//
+// Creation of Edges
+//
+
+// Create Supplier Infos (! csv field terminator is comma !)
+USING PERIODIC COMMIT
+LOAD CSV WITH HEADERS FROM "file:///obsf_test_data_odoo11_0300_supplier_info_V01.csv" AS row
+FIELDTERMINATOR ','
+MATCH (p:Product {id: row.product_tmpl_id_id})
+MATCH (s:Partner {id: row.name_id})
+MERGE (s)-[:SUPPLIES {delay: toInteger(row.delay), minQty: toInteger(row.min_qty), price: toFloat(row.price), currency: row.currency_id_id, code: row.product_code}]->(p);

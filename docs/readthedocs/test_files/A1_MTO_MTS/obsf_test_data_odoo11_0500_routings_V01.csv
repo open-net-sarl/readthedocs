@@ -1,0 +1,2 @@
+id,produit,note,location_id/id,name,operation_ids/workcenter_id/id,operation_ids/time_mode_batch,operation_ids/name,operation_ids/note,operation_ids/time_mode,operation_ids/time_cycle_manual,operation_ids/batch,operation_ids/batch_size,operation_ids/sequence,operation_ids/workorder_ids/id,operation_ids/worksheet
+obsf_mrp_routing.ASSYVELO,ASSYVELO,,,Assemblage Vélos de Montagne,obsf_mrp_workcenter.ASSYVE,10,Assemblage des éléments du vélo,,Compute based on real time,180,Once all products are processed,1,100,,

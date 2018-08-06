@@ -44,3 +44,9 @@ Une autre notion est liée à l'emplacement géographique des acteurs et des pro
 - Où placer notre futur centre de distribution en Asie ?
 - A quelle adresse livrer le produit ?
 - dimension du lieu stockage
+
+======================================================
+Le stock (Inventory)
+======================================================
+
+

@@ -107,9 +107,14 @@ Installation du système pour l'édition locale
 
         # installer les modules nécessaires
         conda install -c conda-forge sphinx-autobuild
+        # se déplacer dans le répertoire de la documentation
+        cd /path/to/project/docs
         # initialiser la régénération automatique
         sphinx-autobuild . _build/html
-        # Dès maintenant, il suffit de raffraîchir la page du navigateur (CTRL+F5) pour oubtenir la nouvelle version après quelques secondes.
+        # Dès maintenant, la documentation est disponible en local à l'adresse http://localhost:8000.
+        # il suffit de raffraîchir la page du navigateur (CTRL+F5) pour oubtenir la nouvelle version
+        # après quelques secondes.
+        #
         # interrompre cet automatisme avec CTRL+C
 
 
