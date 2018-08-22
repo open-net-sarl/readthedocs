@@ -1,0 +1,7 @@
+id,product_tmpl_id/id,name/id,,currency_id/id,delay,date_start,date_end,min_qty,price,product_code
+obsf_product_supplier_info.S1_N1_MTO-MTO_MTS_CADIND,obsf_product_template.S1_N1_MTO-MTO_MTS,obsf_res_partner.CADIND,S1_N1_MTO-MTO_MTS,base.CHF,60,,,100,120,S1_N1_MTO-MTO_MTS
+obsf_product_supplier_info.S2_N1_MTO-MTO_MTS_CADIND,obsf_product_template.S2_N1_MTO-MTO_MTS,obsf_res_partner.CADIND,S2_N1_MTO-MTO_MTS,base.CHF,80,,,100,120,S2_N1_MTO-MTO_MTS
+obsf_product_supplier_info.S3_N1_MTO-MTO_MTS_CADIND,obsf_product_template.S3_N1_MTO-MTO_MTS,obsf_res_partner.CADIND,S3_N1_MTO-MTO_MTS,base.CHF,50,,,100,10,S3_N1_MTO-MTO_MTS
+obsf_product_supplier_info.S4_N1_MTS-MTO_MTS_CADIND,obsf_product_template.S4_N1_MTS-MTO_MTS,obsf_res_partner.CADIND,S4_N1_MTS-MTO_MTS,base.CHF,40,,,100,10,S4_N1_MTS-MTO_MTS
+obsf_product_supplier_info.S5_N1_MTO_CADIND,obsf_product_template.S5_N1_MTO,obsf_res_partner.CADIND,S5_N1_MTO,base.CHF,20,,,100,3,S5_N1_MTO
+obsf_product_supplier_info.S6_N1_MTS_CADIND,obsf_product_template.S6_N1_MTS,obsf_res_partner.CADIND,S6_N1_MTS,base.CHF,20,,,100,8,S6_N1_MTS

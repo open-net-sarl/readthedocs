@@ -13,8 +13,8 @@ Etude Odoo V11 Opérations
 
    intro
    readthedocs/operations
+   readthedocs/fonctionnement
    readthedocs/study
    readthedocs/solutions
-   readthedocs/maintenance
-   glossary
+   annexes
    licence

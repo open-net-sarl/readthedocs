@@ -1,13 +1,13 @@
 id,,company_id/id,lead_days,lead_type,location_id/id,product_max_qty,product_min_qty,name,group_id/id,product_id/id,qty_multiple,warehouse_id/id
-obsf_stock_warehouse_orderpoint.S1_N0_MTO,S1_N0_MTO,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S1_N0_MTO,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S2_N0_MTS,S2_N0_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S2_N0_MTS,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S3_N0_MTO-MTO_MTS,S3_N0_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S3_N0_MTO-MTO_MTS,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S4_N0_MTS-MTO_MTS,S4_N0_MTS-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S4_N0_MTS-MTO_MTS,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S5_N0_MTO-MTO_MTS,S5_N0_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S5_N0_MTO-MTO_MTS,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S6_N0_MTS-MTO_MTS,S6_N0_MTS-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S6_N0_MTS-MTO_MTS,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S1_N1_MTO-MTO_MTS,S1_N1_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S1_N1_MTO-MTO_MTS,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S2_N1_MTO-MTO_MTS,S2_N1_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S2_N1_MTO-MTO_MTS,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S3_N1_MTO-MTO_MTS,S3_N1_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S3_N1_MTO-MTO_MTS,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S4_N1_MTS-MTO_MTS,S4_N1_MTS-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S4_N1_MTS-MTO_MTS,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S5_N1_MTO,S5_N1_MTO,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S5_N1_MTO,1,stock.warehouse0
-obsf_stock_warehouse_orderpoint.S6_N1_MTS,S6_N1_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,,,obsf_product_template.S6_N1_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S1_N0_MTO,S1_N0_MTO,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S1_N0_MTO/00001,,obsf_product_template.S1_N0_MTO,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S2_N0_MTS,S2_N0_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S2_N0_MTS/00001,,obsf_product_template.S2_N0_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S3_N0_MTO-MTO_MTS,S3_N0_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S3_N0_MTO-MTO_MTS/00001,,obsf_product_template.S3_N0_MTO-MTO_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S4_N0_MTS-MTO_MTS,S4_N0_MTS-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S4_N0_MTS-MTO_MTS/00001,,obsf_product_template.S4_N0_MTS-MTO_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S5_N0_MTO-MTO_MTS,S5_N0_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S5_N0_MTO-MTO_MTS/00001,,obsf_product_template.S5_N0_MTO-MTO_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S6_N0_MTS-MTO_MTS,S6_N0_MTS-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S6_N0_MTS-MTO_MTS/00001,,obsf_product_template.S6_N0_MTS-MTO_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S1_N1_MTO-MTO_MTS,S1_N1_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S1_N1_MTO-MTO_MTS/00001,,obsf_product_template.S1_N1_MTO-MTO_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S2_N1_MTO-MTO_MTS,S2_N1_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S2_N1_MTO-MTO_MTS/00001,,obsf_product_template.S2_N1_MTO-MTO_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S3_N1_MTO-MTO_MTS,S3_N1_MTO-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S3_N1_MTO-MTO_MTS/00001,,obsf_product_template.S3_N1_MTO-MTO_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S4_N1_MTS-MTO_MTS,S4_N1_MTS-MTO_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S4_N1_MTS-MTO_MTS/00001,,obsf_product_template.S4_N1_MTS-MTO_MTS,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S5_N1_MTO,S5_N1_MTO,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S5_N1_MTO/00001,,obsf_product_template.S5_N1_MTO,1,stock.warehouse0
+obsf_stock_warehouse_orderpoint.S6_N1_MTS,S6_N1_MTS,base.main_company,0,Day(s) to purchase,stock.stock_location_stock,12,3,S6_N1_MTS/00001,,obsf_product_template.S6_N1_MTS,1,stock.warehouse0
