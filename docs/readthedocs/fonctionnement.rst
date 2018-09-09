@@ -21,7 +21,7 @@ Le processus intégré depuis la vente
 Démonstration
 -----------------
 
-    :download:`Démonstration "Enregistrement d'une commande pour un vélo" <./media/odooV11e_démo_vélos_mto_v01.pdf>`
+    :download:`Démonstration "Enregistrement d'une commande pour un vélo" <./media/odooV11e_demo_velos_mto_v01.pdf>`
 
 
 =====================================================
@@ -50,7 +50,7 @@ Les flux internes et externes
         :alt: Routes et Qualite
         :align: center
 
-    :download:`Routes et Qualité (pdf) <./media/Odoo11_Qualité_et_routes_V01.pdf>`
+    :download:`Routes et Qualité (pdf) <./media/Odoo11_Qualite_et_routes_V01.pdf>`
 
 Les routes
 -------------------------
