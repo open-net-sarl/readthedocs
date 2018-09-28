@@ -13,7 +13,7 @@ Etudier le fonctionnement logistique d'un système ERP et proposer des solutions
 Longtemps, on a par exemple soigné la fièvre par `des saignées <https://fr.wikipedia.org/wiki/Saignée_(médecine)>`_, jusqu'au jour où on s'est aperçu que la situation du malade se dégradait plus qu'elle ne s'améliorait.
 
 
-    .. figure:: ./img/Pratique_d'une_saignée.jpg
+    .. figure:: ./img/Pratique_d'une_saignee.jpg
         :alt: Pratique d'une saignée
         :scale: 70%
         :align: center
