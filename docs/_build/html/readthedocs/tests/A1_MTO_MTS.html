@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="fr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock &mdash; Documentation Etude Odoo V11 Opérations 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="4. C1 - MPS : Approvisionnement basé sur une prévision de vente" href="C1_MPS.html" />
+    <link rel="prev" title="2. A1 - MTO : Approvisionnement « Juste à temps » MTO" href="A1_MTO.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Etude Odoo V11 Opérations
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table des matières</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Les opérations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fonctionnement.html">Le fonctionnement logistique du système Odoo V11</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../study.html">Etude et tests</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../study.html#la-societe-fictive-open-bike-sf">La société fictive «&nbsp;Open Bike SF&nbsp;»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study.html#a-approvisionnement-juste-a-temps">A) Approvisionnement «&nbsp;Juste-à-temps&nbsp;»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study.html#b-tracabilite">B) Traçabilité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study.html#c-usabilite-du-mps">C) Usabilité du MPS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../study.html#les-scenarios-de-test">Les scénarios de test</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="A1_MTS.html">1. A1 - MTS : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="A1_MTO.html">2. A1 - MTO : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTO</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#objectifs-du-test">3.1. Objectifs du test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conditions-de-test">3.2. Conditions de test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conditions-de-reussite">3.3. Conditions de réussite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#procedure-de-test">3.4. Procédure de test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resultats">3.5. Résultats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faiblesses-identifiees">3.6. Faiblesses identifiées</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#commentaire">3.7. Commentaire</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="C1_MPS.html">4. C1 - MPS : Approvisionnement basé sur une prévision de vente</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../solutions.html">Solutions à étudier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../annexes.html">Annexes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../licence.html">Licence</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Etude Odoo V11 Opérations</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../study.html">Etude et tests</a> &raquo;</li>
+        
+      <li>3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/readthedocs/tests/A1_MTO_MTS.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a1-mto-mts-v01-test-du-module-oca-mrp-mto-with-stock">
+<h1>3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock<a class="headerlink" href="#a1-mto-mts-v01-test-du-module-oca-mrp-mto-with-stock" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="objectifs-du-test">
+<h2>3.1. Objectifs du test<a class="headerlink" href="#objectifs-du-test" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p class="first">Vérifier que le système achète et fabrique au plus tard en fonction des conditions suivantes :</p>
+<blockquote>
+<div><ul class="simple">
+<li>Aucun stock</li>
+<li>Article en gestion MTO-MTS</li>
+<li>Régles de réapprovisionnement à zéro (Min : 0 / Max : 0 / Multiple : 1 / 0 days to purchase)</li>
+<li>Pas de délai commercial standard (délai indicatif pour le client)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Vérifier globalement la mécanique d’achat / fabrication.</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="conditions-de-test">
+<h2>3.2. Conditions de test<a class="headerlink" href="#conditions-de-test" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p class="first">Système identiques au test A1 - MTS, sauf</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Module <a class="reference external" href="https://github.com/OCA/manufacture/tree/11.0/mrp_mto_with_stock">OCA mrp_mto_with_stock</a> installé</p>
+</li>
+<li><p class="first">Tous les articles en MTO_MTS</p>
+<blockquote>
+<div><div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/product_route_mto.png"><img alt="product_route_mto" src="../../_images/product_route_mto.png" style="width: 187.6px; height: 88.89999999999999px;" /></a>
+</div>
+<ul class="simple">
+<li><a class="reference download internal" href="../../_downloads/product_template_mto.csv" download=""><code class="xref download docutils literal notranslate"><span class="pre">Produits</span> <span class="pre">avec</span> <span class="pre">routes</span> <span class="pre">MTO</span></code></a></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="conditions-de-reussite">
+<h2>3.3. Conditions de réussite<a class="headerlink" href="#conditions-de-reussite" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>L’ordonnancement du produit commandé est réalisé par un calcul amont des délais cumulés de <strong>fabrication / assemblage</strong> ou <strong>achat</strong> en fonction de la date requise par le client et des stocks disponibles (en l’occurrence pas de stocks !).</li>
+<li>Si la date requise par le client est trop courte, un ordonnancement aval est réalisé et une date réaliste de livraison est calculée.</li>
+<li>Les délais des approvisionnements sont positionnés en fonction des dates des besoins qui les concernent (date du début de l’opération de l’ordre de fabrication MO).</li>
+<li>Les quantités à approvisionner sont correctes (qté en besoin, min. qté minimale d’achat)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="procedure-de-test">
+<h2>3.4. Procédure de test<a class="headerlink" href="#procedure-de-test" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p class="first">Base de données : dst-td-scenario_a1_v02-test</p>
+</li>
+<li><p class="first">Enregistrement d’une commande de vente pour 1x vélo de montagne rouge AB1 (ref. FINI-0001) pour livraison dans 102 jours calendaires.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Date de commande : 30.07.2018</li>
+<li>Date de livraison requise : 10.11.2018 (+102 jours)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">INFO : Une livraison est générée à la date le livraision requise</p>
+</li>
+<li><p class="first">ACTION : Run Scheduler («&nbsp;When you run the schedulers, Odoo tries to reserve the available stock to fulfill the existing pickings and verify if some reordering rules should be triggered.&nbsp;»)</p>
+</li>
+<li><p class="first">INFO : Un Ordre de Fabrication a été généré pour le vélo, début planifié dans -10 jours !</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="resultats">
+<h2>3.5. Résultats<a class="headerlink" href="#resultats" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><p><a class="reference download internal" href="../../_downloads/Resultats_Test_A1_MTO.xlsx" download=""><code class="xref download docutils literal notranslate"><span class="pre">Fichier</span> <span class="pre">de</span> <span class="pre">résultats</span></code></a></p>
+<ul class="simple">
+<li>[OK] La date de livraison déterminée par le système est correcte, étant entendu que la date de livraison requise par le client (+102 jours) était supérieure au délai de production du vélo sans stocks (chemin critique de 93 jours).</li>
+<li>[OK] L’ensemble des MO et PO ont été générés, sans nécessité de faire tourner le scheduler.</li>
+<li>[KO] La plupart des besoins ont été placés correctement dans le temps. Toutefois, la date d’achat de l’article RAW-0301 a été posée à 0 jours de la date planifiée, alors que la fiche fournisseur indique 40 jours. La raison était que la fiche fournisseur prévoyait une quantité minimale d’achat de 100 pces, alors que le besoin MTO n’était que d’une pièce. Une deuxième fiche avec quantité minimale à 1 a résolu le problème du délai.</li>
+<li>[A vérifier] Pour la commande PO000001, le système à regroupé 3 besoins sous un RFQ au même fournisseur, alors que leurs dates de besoin sont différentes. Quelles sont les règles de regroupement ?</li>
+<li>[OK] Les quantités en besoin sont correctes.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="faiblesses-identifiees">
+<h2>3.6. Faiblesses identifiées<a class="headerlink" href="#faiblesses-identifiees" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://nextcloud.open-net.ch/index.php/s/HaqniNCeQogjq36">[A1_MTO_F01]</a> Dans le cas où la seule fiche fournisseur indique une quantité minimale d’achat supérieure au besoin MTO, le système détermine correctement le fournisseur, mais pas le délai, ni le prix. Ceci a pour conséquence que l’achat pourrait être tardif et engendrer un retard de livraison.</li>
+<li><a class="reference external" href="https://nextcloud.open-net.ch/index.php/s/HaqniNCeQogjq36">[A1_MTO_F02]</a> Lors du test, une erreur de manipulation m’a contraint à supprimer la commande de vente. De manière surprenante, les MO et PO y relatifs n’ont pas été supprimés.</li>
+<li><a class="reference external" href="https://nextcloud.open-net.ch/index.php/s/HaqniNCeQogjq36">[A1_MTO_F03]</a> La suppression d’une commande de vente pour article MTO ne réactualise pas le forecast de l’article.</li>
+<li>En cas de suppression d’un PO pour un article MTO, le système ne le régénèra que si l’article dispose d’une règle de réapprovisionnement et en faisant tourner le scheduler. Le besoin se placera alors selon les règles MTS, soit «&nbsp;au plus tôt&nbsp;»</li>
+<li>Le système génère les RFQ sans tenir compte des quantités économiques (paliers de prix des infos fournisseurs).</li>
+<li>Le système réordonne les Infos Fournisseurs à la sauvegarde du produit. Quelles sont ces règles et l’impact ?</li>
+</ul>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/Odoo_Change_Ordre_FIA.gif"><img alt="Odoo_Change_Ordre_FIA" src="../../_images/Odoo_Change_Ordre_FIA.gif" style="width: 607.8px; height: 427.2px;" /></a>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="commentaire">
+<h2>3.7. Commentaire<a class="headerlink" href="#commentaire" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Le mode de gestion Make-To-Order MTO d’Odoo est dédié au réapprovisionnement des besoins stricts. Il ne prend pas en considération les données d’une fiche fournisseur existante.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="C1_MPS.html" class="btn btn-neutral float-right" title="4. C1 - MPS : Approvisionnement basé sur une prévision de vente" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="A1_MTO.html" class="btn btn-neutral" title="2. A1 - MTO : Approvisionnement « Juste à temps » MTO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Didier Stadelmann.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

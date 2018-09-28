@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="fr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Le fonctionnement logistique du système Odoo V11 &mdash; Documentation Etude Odoo V11 Opérations 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Etude et tests" href="study.html" />
+    <link rel="prev" title="Les opérations" href="operations.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Etude Odoo V11 Opérations
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table des matières</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Les opérations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Le fonctionnement logistique du système Odoo V11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#le-processus-standard">Le processus standard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#le-processus-integre-depuis-la-vente">Le processus intégré depuis la vente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demonstration">Démonstration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#la-structure-logistique">La structure logistique</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#les-entrepots">Les entrepôts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#les-emplacements-de-stock">Les emplacements de stock</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#les-flux-internes-et-externes">Les flux internes et externes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#les-routes">Les routes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#les-regles">Les règles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="study.html">Etude et tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">Solutions à étudier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annexes.html">Annexes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Etude Odoo V11 Opérations</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Le fonctionnement logistique du système Odoo V11</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/readthedocs/fonctionnement.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="le-fonctionnement-logistique-du-systeme-odoo-v11">
+<h1>Le fonctionnement logistique du système Odoo V11<a class="headerlink" href="#le-fonctionnement-logistique-du-systeme-odoo-v11" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="le-processus-standard">
+<h2>Le processus standard<a class="headerlink" href="#le-processus-standard" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="le-processus-integre-depuis-la-vente">
+<h3>Le processus intégré depuis la vente<a class="headerlink" href="#le-processus-integre-depuis-la-vente" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/processus_commercial_standard01.png"><img alt="Processus logistique et commercial standard" src="../_images/processus_commercial_standard01.png" style="width: 894.5999999999999px; height: 637.0px;" /></a>
+</div>
+<p><a class="reference download internal" href="../_downloads/Odoo11_Process_AS-IS.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Processus</span> <span class="pre">logistique</span> <span class="pre">et</span> <span class="pre">commercial</span> <span class="pre">standard</span> <span class="pre">(pdf)</span></code></a></p>
+</div></blockquote>
+</div>
+<div class="section" id="demonstration">
+<h3>Démonstration<a class="headerlink" href="#demonstration" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><a class="reference download internal" href="../_downloads/odooV11e_demo_velos_mto_v01.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Démonstration</span> <span class="pre">&quot;Enregistrement</span> <span class="pre">d'une</span> <span class="pre">commande</span> <span class="pre">pour</span> <span class="pre">un</span> <span class="pre">vélo&quot;</span></code></a></div></blockquote>
+</div>
+</div>
+<div class="section" id="la-structure-logistique">
+<h2>La structure logistique<a class="headerlink" href="#la-structure-logistique" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/routes_et_emplacements01.png"><img alt="Routes et Emplacements de stock" src="../_images/routes_et_emplacements01.png" style="width: 657.3px; height: 273.7px;" /></a>
+</div>
+<p><a class="reference download internal" href="../_downloads/Odoo11_Routes_et_Emplacements_de_stock_V02.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Routes</span> <span class="pre">et</span> <span class="pre">Emplacements</span> <span class="pre">de</span> <span class="pre">stock</span> <span class="pre">(pdf)</span></code></a></p>
+</div></blockquote>
+<div class="section" id="les-entrepots">
+<h3>Les entrepôts<a class="headerlink" href="#les-entrepots" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="les-emplacements-de-stock">
+<h3>Les emplacements de stock<a class="headerlink" href="#les-emplacements-de-stock" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+</div>
+<div class="section" id="les-flux-internes-et-externes">
+<h2>Les flux internes et externes<a class="headerlink" href="#les-flux-internes-et-externes" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/routes_et_qualite01.png"><img alt="Routes et Qualite" src="../_images/routes_et_qualite01.png" style="width: 820.4px; height: 439.59999999999997px;" /></a>
+</div>
+<p><a class="reference download internal" href="../_downloads/Odoo11_Qualite_et_routes_V01.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Routes</span> <span class="pre">et</span> <span class="pre">Qualité</span> <span class="pre">(pdf)</span></code></a></p>
+</div></blockquote>
+<div class="section" id="les-routes">
+<h3>Les routes<a class="headerlink" href="#les-routes" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="les-regles">
+<h3>Les règles<a class="headerlink" href="#les-regles" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="study.html" class="btn btn-neutral float-right" title="Etude et tests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="operations.html" class="btn btn-neutral" title="Les opérations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Didier Stadelmann.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

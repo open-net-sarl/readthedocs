@@ -1,0 +1,13 @@
+id;product_tmpl_id/id;name/id;;;currency_id/id;delay;date_start;date_end;min_qty;price;product_code
+obsf_product_supplier_info.SEMI-1102_CADIND_V01;obsf_product_template.SEMI-1102;obsf_res_partner.CADIND;SEMI-1102;CADIND;base.CHF;60;;;1;120;CADIND-677
+obsf_product_supplier_info.SEMI-0102_CADIND_V01;obsf_product_template.SEMI-0102;obsf_res_partner.CADIND;SEMI-0102;CADIND;base.CHF;80;;;1;120;CADIND-497
+obsf_product_supplier_info.RAW-1301_FESSKI_V01;obsf_product_template.RAW-1301;obsf_res_partner.FESSKI;RAW-1301;FESSKI;base.CHF;50;;;1;10;FESSKI-801
+obsf_product_supplier_info.RAW-0301_FESSKI_V01;obsf_product_template.RAW-0301;obsf_res_partner.FESSKI;RAW-0301;FESSKI;base.CHF;40;;;100;10;FESSKI-146
+obsf_product_supplier_info.RAW-0101_ROHMAT_V01;obsf_product_template.RAW-0101;obsf_res_partner.ROHMAT;RAW-0101;ROHMAT;base.CHF;20;;;1;3;ROHMAT-794
+obsf_product_supplier_info.RAW-0101_ROHTOM_V01;obsf_product_template.RAW-0101;obsf_res_partner.ROHTOM;RAW-0101;ROHTOM;base.CHF;20;;;1;8;ROHTOM-735
+obsf_product_supplier_info.SEMI-0103_FOURCH_V01;obsf_product_template.SEMI-0103;obsf_res_partner.FOURCH;SEMI-0103;FOURCH;base.CHF;30;;;1;60;FOURCH-504
+obsf_product_supplier_info.SEMI-1103_FOURCH_V01;obsf_product_template.SEMI-1103;obsf_res_partner.FOURCH;SEMI-1103;FOURCH;base.CHF;30;;;1;60;FOURCH-664
+obsf_product_supplier_info.SEMI-0203_PIRELO_V01;obsf_product_template.SEMI-0203;obsf_res_partner.PIRELO;SEMI-0203;PIRELO;base.CHF;40;;;1;9.5;PIRELO-458
+obsf_product_supplier_info.SEMI-0301_BIKECO_V01;obsf_product_template.SEMI-0301;obsf_res_partner.BIKECO;SEMI-0301;BIKECO;base.CHF;20;;;1;20.3;BIKECO-951
+obsf_product_supplier_info.SEMI-0201_BIKECO_V01;obsf_product_template.SEMI-0201;obsf_res_partner.BIKECO;SEMI-0201;BIKECO;base.CHF;30;;;1;8;BIKECO-861
+obsf_product_supplier_info.SEMI-0202_BIKECO_V01;obsf_product_template.SEMI-0202;obsf_res_partner.BIKECO;SEMI-0202;BIKECO;base.CHF;30;;;1000;1;BIKECO-689

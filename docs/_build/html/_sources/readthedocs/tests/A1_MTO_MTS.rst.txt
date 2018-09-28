@@ -1,0 +1,87 @@
+========================================================
+A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock
+========================================================
+
+Objectifs du test
+-----------------
+
+        - Vérifier que le système achète et fabrique au plus tard en fonction des conditions suivantes :
+
+            - Aucun stock
+            - Article en gestion MTO-MTS
+            - Régles de réapprovisionnement à zéro (Min : 0 / Max : 0 / Multiple : 1 / 0 days to purchase)
+            - Pas de délai commercial standard (délai indicatif pour le client)
+
+        - Vérifier globalement la mécanique d'achat / fabrication.
+    
+Conditions de test
+------------------
+
+        - Système identiques au test A1 - MTS, sauf
+
+            - Module `OCA mrp_mto_with_stock <https://github.com/OCA/manufacture/tree/11.0/mrp_mto_with_stock>`_ installé
+
+            - Tous les articles en MTO_MTS
+
+                .. figure:: ../../img/product_route_mto.png
+                   :scale: 70%
+                   :alt: product_route_mto
+                   :align: center
+
+                - :download:`Produits avec routes MTO <../test_files/A1_MTO/product_template_mto.csv>`
+
+
+Conditions de réussite
+----------------------
+        
+        - L'ordonnancement du produit commandé est réalisé par un calcul amont des délais cumulés de **fabrication / assemblage** ou **achat** en fonction de la date requise par le client et des stocks disponibles (en l'occurrence pas de stocks !).
+        - Si la date requise par le client est trop courte, un ordonnancement aval est réalisé et une date réaliste de livraison est calculée.
+        - Les délais des approvisionnements sont positionnés en fonction des dates des besoins qui les concernent (date du début de l'opération de l'ordre de fabrication MO).
+        - Les quantités à approvisionner sont correctes (qté en besoin, min. qté minimale d'achat)
+
+
+Procédure de test
+-----------------
+
+        - Base de données : dst-td-scenario_a1_v02-test
+        - Enregistrement d'une commande de vente pour 1x vélo de montagne rouge AB1 (ref. FINI-0001) pour livraison dans 102 jours calendaires.
+
+            - Date de commande : 30.07.2018
+            - Date de livraison requise : 10.11.2018 (+102 jours)
+
+        - INFO : Une livraison est générée à la date le livraision requise
+        - ACTION : Run Scheduler ("When you run the schedulers, Odoo tries to reserve the available stock to fulfill the existing pickings and verify if some reordering rules should be triggered.")
+        - INFO : Un Ordre de Fabrication a été généré pour le vélo, début planifié dans -10 jours !
+
+
+Résultats
+---------
+
+        :download:`Fichier de résultats <../test_results/Resultats_Test_A1_MTO.xlsx>`
+
+        - [OK] La date de livraison déterminée par le système est correcte, étant entendu que la date de livraison requise par le client (+102 jours) était supérieure au délai de production du vélo sans stocks (chemin critique de 93 jours).
+        - [OK] L'ensemble des MO et PO ont été générés, sans nécessité de faire tourner le scheduler.
+        - [KO] La plupart des besoins ont été placés correctement dans le temps. Toutefois, la date d'achat de l'article RAW-0301 a été posée à 0 jours de la date planifiée, alors que la fiche fournisseur indique 40 jours. La raison était que la fiche fournisseur prévoyait une quantité minimale d'achat de 100 pces, alors que le besoin MTO n'était que d'une pièce. Une deuxième fiche avec quantité minimale à 1 a résolu le problème du délai.
+        - [A vérifier] Pour la commande PO000001, le système à regroupé 3 besoins sous un RFQ au même fournisseur, alors que leurs dates de besoin sont différentes. Quelles sont les règles de regroupement ?
+        - [OK] Les quantités en besoin sont correctes.
+
+        
+Faiblesses identifiées
+----------------------
+
+        - `[A1_MTO_F01] <https://nextcloud.open-net.ch/index.php/s/HaqniNCeQogjq36>`_ Dans le cas où la seule fiche fournisseur indique une quantité minimale d'achat supérieure au besoin MTO, le système détermine correctement le fournisseur, mais pas le délai, ni le prix. Ceci a pour conséquence que l'achat pourrait être tardif et engendrer un retard de livraison.
+        - `[A1_MTO_F02] <https://nextcloud.open-net.ch/index.php/s/HaqniNCeQogjq36>`_ Lors du test, une erreur de manipulation m'a contraint à supprimer la commande de vente. De manière surprenante, les MO et PO y relatifs n'ont pas été supprimés.
+        - `[A1_MTO_F03] <https://nextcloud.open-net.ch/index.php/s/HaqniNCeQogjq36>`_ La suppression d'une commande de vente pour article MTO ne réactualise pas le forecast de l'article.
+        - En cas de suppression d'un PO pour un article MTO, le système ne le régénèra que si l'article dispose d'une règle de réapprovisionnement et en faisant tourner le scheduler. Le besoin se placera alors selon les règles MTS, soit "au plus tôt"
+        - Le système génère les RFQ sans tenir compte des quantités économiques (paliers de prix des infos fournisseurs).
+        - Le système réordonne les Infos Fournisseurs à la sauvegarde du produit. Quelles sont ces règles et l'impact ? 
+
+        .. figure:: ../../img/Odoo_Change_Ordre_FIA.gif
+            :scale: 60%
+            :alt: Odoo_Change_Ordre_FIA
+            :align: center 
+
+Commentaire
+-----------
+            - Le mode de gestion Make-To-Order MTO d'Odoo est dédié au réapprovisionnement des besoins stricts. Il ne prend pas en considération les données d'une fiche fournisseur existante. 
+

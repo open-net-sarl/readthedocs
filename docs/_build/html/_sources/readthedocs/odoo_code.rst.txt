@@ -1,0 +1,63 @@
+###############################
+Code Odoo V11 intéressant
+###############################
+
+=====================================================
+Confirmation de la commande de vente
+=====================================================
+
+.. note:: This is a note admonition.
+   This is the second line of the first paragraph.
+
+   - The note contains all indented body elements
+     following.
+   - It includes this bullet list.
+
+
+.. admonition:: action_confirm()
+    :class: tip
+
+    sale\models\sale.py
+
+    class SaleOrder(models.Model):
+        _name = "sale.order"
+        
+        @api.multi
+        def action_confirm(self):
+            `self._action_confirm() <action_confirm()>`_
+
+            ...
+
+            return True
+
+
+
+action_confirm()
+
+::
+
+    sale\models\sale.py
+
+    class SaleOrder(models.Model):
+        _name = "sale.order"
+        
+    @api.multi
+        def action_confirm(self):
+            self._action_confirm() :ref:`_action_confirm`
+            ...
+            return True
+
+.. _action_confirm:
+
+_action_confirm()
+
+::
+
+    class SaleOrder(models.Model):
+    _inherit = "sale.order"
+
+    @api.multi
+    def _action_confirm(self):
+        super(SaleOrder, self)._action_confirm()
+        for order in self:
+            order.order_line._action_launch_procurement_rule()

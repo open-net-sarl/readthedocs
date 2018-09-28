@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="fr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Etude et tests &mdash; Documentation Etude Odoo V11 Opérations 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="1. A1 - MTS : Approvisionnement « Juste à temps » MTS" href="tests/A1_MTS.html" />
+    <link rel="prev" title="Le fonctionnement logistique du système Odoo V11" href="fonctionnement.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Etude Odoo V11 Opérations
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table des matières</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Les opérations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fonctionnement.html">Le fonctionnement logistique du système Odoo V11</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Etude et tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#la-societe-fictive-open-bike-sf">La société fictive «&nbsp;Open Bike SF&nbsp;»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-approvisionnement-juste-a-temps">A) Approvisionnement «&nbsp;Juste-à-temps&nbsp;»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#b-tracabilite">B) Traçabilité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-usabilite-du-mps">C) Usabilité du MPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#les-scenarios-de-test">Les scénarios de test</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests/A1_MTS.html">1. A1 - MTS : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests/A1_MTO.html">2. A1 - MTO : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests/A1_MTO_MTS.html">3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests/C1_MPS.html">4. C1 - MPS : Approvisionnement basé sur une prévision de vente</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">Solutions à étudier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annexes.html">Annexes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Etude Odoo V11 Opérations</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Etude et tests</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/readthedocs/study.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="etude-et-tests">
+<h1>Etude et tests<a class="headerlink" href="#etude-et-tests" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="la-societe-fictive-open-bike-sf">
+<h2>La société fictive «&nbsp;Open Bike SF&nbsp;»<a class="headerlink" href="#la-societe-fictive-open-bike-sf" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans le but d’assurer une certaine <strong>cohérence des tests</strong> à réaliser, nous utiliserons un <strong>jeu de test</strong> basé sur une <strong>société fictive «&nbsp;Open Bike SF (OBSF)&nbsp;»</strong>.</p>
+<p>OBSF commercialise des <strong>vélos haut de gamme</strong>, principalement en Europe. Elle a été fondée il y a 5 ans par trois ingénieurs passionnés de cyclisme.</p>
+<p>Les grands avantages des vélos OBSF sont :</p>
+<blockquote>
+<div><ul class="simple">
+<li>une conception robuste</li>
+<li>un look sportif et jeune</li>
+<li>un service après-vente impeccable</li>
+</ul>
+</div></blockquote>
+<p>Les ventes connaissent une <strong>forte croissance</strong> depuis la création de la société. Ceci nécessite un <strong>suivi constant des ressources</strong> disponibles, notamment du <strong>cash-flow</strong> et de la <strong>disponibilité des produits</strong>.</p>
+<p>Les <strong>vélos de montagne</strong> sont fabriqué entièrement <strong>dans les ateliers de Romont et de Bussigny</strong>. Les <strong>vélos de ville</strong>, par contre, sont <strong>entièrement sous-traités</strong> en Asie en mode «&nbsp;Fabless Manufacturing&nbsp;».</p>
+<p>Les dirigeants de OBSF souhaitent acquérir un nouveau système de gestion pour leur entreprise. Ils nous ont contacté avec un cahier des charges précis, en nous demandant d’éviter spécifiquement les points faibles de leur ancien système ERP :</p>
+</div>
+<div class="section" id="a-approvisionnement-juste-a-temps">
+<h2>A) Approvisionnement «&nbsp;Juste-à-temps&nbsp;»<a class="headerlink" href="#a-approvisionnement-juste-a-temps" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div>A1) Le système doit permettre de commander et d’être livré «&nbsp;au plus tard&nbsp;» ou <strong>«&nbsp;juste-à-temps&nbsp;»</strong>, c’est-à-dire au moment précis des besoins de l’ordonnancement. Ceci permet notamment de <strong>préserver les liquidités</strong> et d’éviter les <strong>risques d’obsolescence</strong> du stock.
+A2) OBSF <strong>maîtrise difficilement les délais</strong> de ses produits en <strong>«&nbsp;Fabless Manufacturing&nbsp;»</strong>, les fournisseurs <strong>s’impliquant souvent trop peu</strong>. Ce mode de «&nbsp;production à distance&nbsp;» implique une synchronisation et une communication constante avec les fournisseurs.</div></blockquote>
+</div>
+<div class="section" id="b-tracabilite">
+<h2>B) Traçabilité<a class="headerlink" href="#b-tracabilite" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><p>Les vélos et certains composants doivent être <strong>identifiés et tracés spécifiquement par des Nos de série ou de lot</strong>. Plusieurs raisons à cela, entre autre :</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Service après-vente :</dt>
+<dd><ul class="first last">
+<li>Livrer la bonne pièce de remplacement, ou une alternative compatible.</li>
+<li>Offrir les prestations sous garantie uniquement lorsque celle-ci s’applique et éviter la fraude.</li>
+<li>Evaluer le taux de respect des spécifications techniques par les fournisseurs, par la remontée statistique des problèmes.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Rappel de produits non conformes</dt>
+<dd><ul class="first last">
+<li>Etre en mesure d’informer et de rappeler les produits, en cas de découverte de produits non conformes, ou présentant un risques de sécurité pour l’utilisateur.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Contrôle des circuits de distribution</dt>
+<dd><ul class="first last">
+<li>Etre en mesure d’identifier les revendeurs qui vendraient hors du territoire qui leur a été attribué.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>B1) Le système doit permettre de connaître la <strong>localisation d’un article</strong> sérialisé <strong>en tout temps</strong>, depuis sa <strong>première réception</strong> chez OBSF jusqu’à la <strong>livraison au client</strong>, y compris à l’intérieur des stocks, des ateliers, et en transit. Ceci est bien sûr également valable si l’article a été intégré dans un groupe ou transformé.</p>
+<p>B2) Les employés des ateliers de montage souhaitent que leurs écrans de saisie soient <strong>les plus conviviaux possible</strong>, et qu’en cas d’erreur de saisie ou de composant, la <strong>procédure de correction soit simple, rapide et intuitive</strong>. Ceci évitera que des données erronnées soient saisies dans la précipitation, et par conséquent la perte de la trace des composants.</p>
+</div></blockquote>
+</div>
+<div class="section" id="c-usabilite-du-mps">
+<h2>C) Usabilité du MPS<a class="headerlink" href="#c-usabilite-du-mps" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><dl class="docutils">
+<dt>Les ventes des produits OBSF se réalisent durant toute l’année, mais <strong>fluctuent fortement</strong></dt>
+<dd><ul class="first last simple">
+<li>à certaines <strong>périodes</strong> et</li>
+<li>selon les <strong>régions</strong>.</li>
+</ul>
+</dd>
+<dt>Ainsi, les ventes de vélos sont</dt>
+<dd><ul class="first simple">
+<li>très fortes au printemps,</li>
+<li>connaissent un pic avant les vacances d’été, puis</li>
+<li>s’affaiblissent durant l’automne et l’hiver.</li>
+</ul>
+<p class="last">Les ventes en Italie connaissent toutefois un pic de vente durant les fêtes de Noël.</p>
+</dd>
+</dl>
+<p>Le <strong>service après-vente</strong> a également identifié <strong>des pics de demande de pièces de rechange et de consommables au printemps</strong> et dans une moindre mesure en automne. Ceci s’explique par le fait que les clients révisent leurs vélos en prévision des vacances, ou réparent après les vacances.</p>
+<p>OBSF souhaite un outil pour gérer proprement ses prévisions de vente :</p>
+<blockquote>
+<div><ul class="simple">
+<li>éviter de perdre des ventes du fait de rupture de stock (vélos et composants SAV)</li>
+<li>éviter l’insatisfaction des clients du fait du manque de composants (SAV)</li>
+<li>éviter les conflits entre les différents départements de vente de vélo et le SAV en cas de stocks insuffisants ou</li>
+<li>faire appel à la responsabilité de chacun en cas de stocks trop importants, en conservant les prévisions de chacun</li>
+<li>mise à disposition d’écrans de contrôle et d’alerte, voire capable de proposer des solutions.</li>
+</ul>
+</div></blockquote>
+<p>C1) OBSF a entendu parler du <a class="reference external" href="https://www.odoo.com/slides/slide/mrp-ii-scheduler-and-master-production-schedule-422">module MPS d’Odoo Enterprise V11</a> et souhaiterait savoir dans quelle mesure il permettrait de se passer d’Excel pour couvrir les besoins précités,
+C2) Et comment ce système MPS réagit en cas de</p>
+<blockquote>
+<div><ul class="simple">
+<li>déviation de la prévision,</li>
+<li>de retard de production, ou</li>
+<li>d’imprévus.</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Les produits OBSF s’adressent à des clients connaisseurs. Certains sont prêts à attendre quelques semaines pour recevoir leur nouveau vélo.</p>
+<p>OBSF a toutefois remarqué que lorsque un modèle n’est pas livrable du stock, les <strong>ventes chutent</strong> de près de 30%. Il est donc crucial pour OBSF d’analyser constamment les tendances du marché et de <strong>faire des prévisions de vente</strong> proche de la réalité. Ceci a pour conséquence l’achat anticipé de composants et le stockage de produits finis.</p>
+<p>Le <strong>SAV</strong> requiert également des stock de pièces détachées. En effet, lorsque un article de réparation n’est pas disponible, les clients se fâchent souvent car ils ne peuvent pas disposer de leur vélo durant le délai de livraison.</p>
+<p>Les <strong>financiers</strong> ne cessent de rappeler que le stock coûte cher ! Ceci est correct si l’on considère que le coût du stock est évalué à 15% (infrastructure, manutention, perte, obsolescence, assurances, etc). D’autre part, le cash flow peut souffrir rapidement d’un stock trop important, sachant que OBSF emprunte à 4%.</p>
+<p>Nous avons donc ici un dilemne à traiter :
+-    Pas de stock : moins de ventes et un risque sur l’image de marque
+-    Trop de stock : risque financier, augmentation du prix des produits.</p>
+<p>Nous ne nous intéresserons pas en totalité des calculs financiers liés aux stratégies de stockage, ce n’est pas le but direct de ce travail. Toutefois, afin de pouvoir trouver un point optimum entre la maximisation des ventes (et du bénéfice) et la minimisation du blocage des ressources de l’entreprise, notamment financières, il est important de distinguer :</p>
+<ul>
+<li><p class="first">les différents enjeux du stock :</p>
+<blockquote>
+<div><ul class="simple">
+<li>cyclique : correspond au cycle «&nbsp;quantité demandée&nbsp;» * «&nbsp;temps de réappro&nbsp;»</li>
+<li>sécurité : couvre les retards de livraison des fournisseurs ou une demande temporaire trop forte</li>
+<li>protégé  : nécessite une autorisation élevée afin d’être livré. Dans le cas d’une rupture de stock importante, on conservera un quantité minimale à la disposition exclusive des demandes les plus pressantes.</li>
+<li>de synchronisation : lors de l’assemblage d’un groupe, il peut arriver qu’un composant soit en retard. Le stock des autres composants «&nbsp;à l’heure&nbsp;» forment le stock de synchronisation.</li>
+<li>spéculatif : acheter plus que strictement nécessaire, afin de bénéficier d’un avantage financier ou stratégique (profiter d’un cours de change favorable, d’un rabais spécial, etc.)</li>
+<li>anticipé : produire de manière anticipée afin de lisser la charge de l’entreprise (fabriquer des skis également en été afin d’être prêt à livrer dès le début de l’hiver)</li>
+<li>obsolète : produit en fin de vie, peu de chance d’être vendu</li>
+<li>WIP : (Work-In-Progress / Work-In-Process) : stocks qui sont actuellement dans le processus de fabrication</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">les différentes typologies du stock</p>
+<blockquote>
+<div><ul class="simple">
+<li>achetés/catalogue : articles du marché, revendu sans transformation par l’entreprise.</li>
+<li>soutraité :  article fabriqué par un tiers, sur la base de spécifications de l’entreprise.</li>
+<li>matières premières : articles achetés auprès de fournisseurs, dans le but de les transformés ultérieurement.</li>
+<li>semi-finis : produits en cours de fabrication, non-vendables en l’état</li>
+<li>finis : produits destinés à la vente.</li>
+<li>emballage : destiné à l’emballage des marchandises en prévision de leur transport.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>On relevera que OBSF reçoit les demandes de clients par deux canaux distinct :</p>
+<ul class="last simple">
+<li><dl class="first docutils">
+<dt>des commandes de vélos finis.</dt>
+<dd><ul class="first last">
+<li>planifiable (prévisions des vente, stratégie de pénétration)</li>
+<li>fluctue en fonction des saisons</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>des commandes de pièces détachées.</dt>
+<dd><ul class="first last">
+<li>rupture de stock a un fort impact négatif sur la renommée de la marque</li>
+<li>partiellement planifiable (consommation passées, estimation du niveau d’usure du parc de vélos en clientèle, alerte sur faiblesse identifiée, etc.)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="les-scenarios-de-test">
+<h2>Les scénarios de test<a class="headerlink" href="#les-scenarios-de-test" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tests/A1_MTS.html">1. A1 - MTS : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTS.html#objectifs-du-test">1.1. Objectifs du test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTS.html#conditions-de-test">1.2. Conditions de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTS.html#conditions-de-reussite">1.3. Conditions de réussite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTS.html#procedure-de-test">1.4. Procédure de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTS.html#resultats">1.5. Résultats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTS.html#faiblesses-identifiees">1.6. Faiblesses identifiées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTS.html#commentaire">1.7. Commentaire</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests/A1_MTO.html">2. A1 - MTO : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO.html#objectifs-du-test">2.1. Objectifs du test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO.html#conditions-de-test">2.2. Conditions de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO.html#conditions-de-reussite">2.3. Conditions de réussite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO.html#procedure-de-test">2.4. Procédure de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO.html#resultats">2.5. Résultats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO.html#faiblesses-identifiees">2.6. Faiblesses identifiées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO.html#commentaire">2.7. Commentaire</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests/A1_MTO_MTS.html">3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO_MTS.html#objectifs-du-test">3.1. Objectifs du test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO_MTS.html#conditions-de-test">3.2. Conditions de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO_MTS.html#conditions-de-reussite">3.3. Conditions de réussite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO_MTS.html#procedure-de-test">3.4. Procédure de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO_MTS.html#resultats">3.5. Résultats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO_MTS.html#faiblesses-identifiees">3.6. Faiblesses identifiées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO_MTS.html#commentaire">3.7. Commentaire</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests/C1_MPS.html">4. C1 - MPS : Approvisionnement basé sur une prévision de vente</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#objectifs-du-test">4.1. Objectifs du test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#conditions-de-test">4.2. Conditions de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#conditions-de-reussite">4.3. Conditions de réussite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#procedure-de-test">4.4. Procédure de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#resultats">4.5. Résultats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#faiblesses-identifiees">4.6. Faiblesses identifiées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#commentaire">4.7. Commentaire</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tests/A1_MTS.html" class="btn btn-neutral float-right" title="1. A1 - MTS : Approvisionnement « Juste à temps » MTS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fonctionnement.html" class="btn btn-neutral" title="Le fonctionnement logistique du système Odoo V11" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Didier Stadelmann.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

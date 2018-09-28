@@ -1,0 +1,25 @@
+id;;company_id/id;lead_days;lead_type;location_id/id;product_max_qty;product_min_qty;name;group_id/id;product_id/id;qty_multiple;warehouse_id/id
+obsf_stock_warehouse_orderpoint.FINI-0001;FINI-0001;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/FINI-0001/01;;obsf_product_template.FINI-0001;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0100;SEMI-0100;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0100/01;;obsf_product_template.SEMI-0100;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0102;SEMI-0102;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0102/01;;obsf_product_template.SEMI-0102;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0103;SEMI-0103;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0103/01;;obsf_product_template.SEMI-0103;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0104;SEMI-0104;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0104/01;;obsf_product_template.SEMI-0104;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0106;SEMI-0106;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0106/01;;obsf_product_template.SEMI-0106;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.RAW-0101;RAW-0101;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/RAW-0101/01;;obsf_product_template.RAW-0101;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0105;SEMI-0105;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0105/01;;obsf_product_template.SEMI-0105;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0107;SEMI-0107;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0107/01;;obsf_product_template.SEMI-0107;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0200;SEMI-0200;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0200/01;;obsf_product_template.SEMI-0200;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0201;SEMI-0201;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0201/01;;obsf_product_template.SEMI-0201;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0202;SEMI-0202;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0202/01;;obsf_product_template.SEMI-0202;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0203;SEMI-0203;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0203/01;;obsf_product_template.SEMI-0203;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0300;SEMI-0300;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0300/01;;obsf_product_template.SEMI-0300;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0301;SEMI-0301;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0301/01;;obsf_product_template.SEMI-0301;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-0302;SEMI-0302;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-0302/01;;obsf_product_template.SEMI-0302;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.RAW-0301;RAW-0301;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/RAW-0301/01;;obsf_product_template.RAW-0301;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.FINI-1001;FINI-1001;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/FINI-1001/01;;obsf_product_template.FINI-1001;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-1100;SEMI-1100;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-1100/01;;obsf_product_template.SEMI-1100;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-1102;SEMI-1102;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-1102/01;;obsf_product_template.SEMI-1102;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-1103;SEMI-1103;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-1103/01;;obsf_product_template.SEMI-1103;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-1300;SEMI-1300;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-1300/01;;obsf_product_template.SEMI-1300;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.SEMI-1302;SEMI-1302;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/SEMI-1302/01;;obsf_product_template.SEMI-1302;1;stock.warehouse0
+obsf_stock_warehouse_orderpoint.RAW-1301;RAW-1301;base.main_company;0;Day(s) to purchase;stock.stock_location_stock;0;0;OP/RAW-1301/01;;obsf_product_template.RAW-1301;1;stock.warehouse0

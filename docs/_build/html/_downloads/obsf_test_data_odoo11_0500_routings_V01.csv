@@ -1,0 +1,12 @@
+id;produit;note;location_id/id;name;operation_ids/workcenter_id/id;operation_ids/time_mode_batch;operation_ids/name;operation_ids/note;operation_ids/time_mode;operation_ids/time_cycle_manual;operation_ids/batch;operation_ids/batch_size;operation_ids/sequence;operation_ids/workorder_ids/id;operation_ids/worksheet
+obsf_mrp_routing.ASSYVELO;ASSYVELO;;;Assemblage Vélos de Montagne;obsf_mrp_workcenter.ASSYVE;10;Assemblage des éléments du vélo;;Compute based on real time;180;Once all products are processed;1;100;;
+;;;;;obsf_mrp_workcenter.ASSYVE;10;Mise en carton avec instruction de montage;;Compute based on real time;30;Once all products are processed;1;200;;
+obsf_mrp_routing.ASSYCADR;ASSYCADR;;;Assemblage des cadres de vélos;obsf_mrp_workcenter.ASSYVE;10;Assemblage du cadre;;Compute based on real time;360;Once all products are processed;1;;;
+obsf_mrp_routing.ASSYFREIN;ASSYFREIN;;;Assemblage des freins avants ou arrières;obsf_mrp_workcenter.USIFRE;10;Assemblage des freins;;Compute based on real time;60;Once all products are processed;1;;;
+obsf_mrp_routing.USINFREIN;USINFREIN;;;Usinage des disques de frein;obsf_mrp_workcenter.USIFRE;10;Usinage des disques à 3mu;;Compute based on real time;120;Once all products are processed;1;;;
+obsf_mrp_routing.ASSYROUE;ASSYROUE;;;Assemblage des roues;obsf_mrp_workcenter.ASSYVE;10;Montages des rayons sur la jante;;Compute based on real time;180;Once all products are processed;1;100;;
+;;;;;obsf_mrp_workcenter.ASSYVE;10;Montage du pneu sur la jante;;Compute based on real time;20;Once all products are processed;1;200;;
+;;;;;obsf_mrp_workcenter.ASSYVE;10;Gonflage du pneu;;Compute based on real time;10;Once all products are processed;1;300;;
+;;;;;obsf_mrp_workcenter.ASSYVE;10;Vérification du gonflage;;Compute based on real time;10;Once all products are processed;1;400;;
+obsf_mrp_routing.ASSYSELL;ASSYSELL;;;Assemblage de la selle avec la tige;obsf_mrp_workcenter.ASSYVE;10;Montage de la tige de selle;;Compute based on real time;30;Once all products are processed;1;;;
+obsf_mrp_routing.MAROSELL;MAROSELL;;;Maroquinerie de la selle;obsf_mrp_workcenter.MAROQ;10;Couture de la selle;;Compute based on real time;120;Once all products are processed;1;;;

@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="fr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Les opérations &mdash; Documentation Etude Odoo V11 Opérations 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Le fonctionnement logistique du système Odoo V11" href="fonctionnement.html" />
+    <link rel="prev" title="Introduction" href="../intro.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Etude Odoo V11 Opérations
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table des matières</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Les opérations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preambule">Préambule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#le-temps-et-la-duree">Le temps et la durée</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#l-espace">L’espace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#le-stock-inventory">Le stock (Inventory)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fonctionnement.html">Le fonctionnement logistique du système Odoo V11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study.html">Etude et tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">Solutions à étudier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annexes.html">Annexes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Etude Odoo V11 Opérations</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Les opérations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/readthedocs/operations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="les-operations">
+<h1>Les opérations<a class="headerlink" href="#les-operations" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="preambule">
+<h2>Préambule<a class="headerlink" href="#preambule" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><p>Dans le cadre de ce projet, nous comprenons le terme «&nbsp;Opérations&nbsp;» comme étant</p>
+<blockquote>
+<div><p>«&nbsp;l’ensemble des activités et systèmes permettant de</p>
+<ul class="simple">
+<li>planifier,</li>
+<li>organiser,</li>
+<li>contrôler et</li>
+<li>documenter</li>
+</ul>
+<p>la chaîne logistique des produits d’une entreprise, depuis l’achat des matières premières et des composants, jusqu’à la fin de vie du produit, en passant par sa mise à disposition au client, y compris les domaines de la fabrication et de la planification/optimisation des stocks.&nbsp;»</p>
+</div></blockquote>
+<p>Nous ne traiterons toutefois pas des sujets «&nbsp;amont&nbsp;» tels que la conception des produits, ni les sujet «&nbsp;aval&nbsp;» tels que la vente et la comptabilité. Nous ferons toutefois le lien avec ces systèmes afin d’offrir une compréhension intégrée.</p>
+<p>Nous tâcherons d’aborder l’ensemble des éléments impliqués et d’indiquer leurs interdépendances, mais ne développerons - en raison du temps imparti - que les éléments ayant une plus-value dans le cadre de ce travail de diplôme.</p>
+</div></blockquote>
+</div>
+<div class="section" id="le-temps-et-la-duree">
+<h2>Le temps et la durée<a class="headerlink" href="#le-temps-et-la-duree" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><p>Une des notions clé des opérations est le temps.</p>
+<p>On retrouve cette notion dans toutes les phases des opérations, par exemple :</p>
+<ul class="simple">
+<li>Combien d’articles allons-nous vendre les 6 prochains mois ?</li>
+<li>Quand faut-il acheter les matières premières et composants ?</li>
+<li>A quelle date pouvons-nous promettre la livraison de ce produit ?</li>
+<li>Quel est la taux de rotation du stock ?</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="l-espace">
+<h2>L’espace<a class="headerlink" href="#l-espace" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div><p>Une autre notion est liée à l’emplacement géographique des acteurs et des produits.</p>
+<ul class="simple">
+<li>Où placer notre futur centre de distribution en Asie ?</li>
+<li>A quelle adresse livrer le produit ?</li>
+<li>dimension du lieu stockage</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="le-stock-inventory">
+<h2>Le stock (Inventory)<a class="headerlink" href="#le-stock-inventory" title="Lien permanent vers ce titre">¶</a></h2>
+<blockquote>
+<div>TODO</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fonctionnement.html" class="btn btn-neutral float-right" title="Le fonctionnement logistique du système Odoo V11" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../intro.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Didier Stadelmann.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
