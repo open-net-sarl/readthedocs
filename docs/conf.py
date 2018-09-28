@@ -26,7 +26,7 @@ author = u'Didier Stadelmann'
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'0.1'
+release = u'1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -148,6 +148,27 @@ latex_documents = [
      u'Didier Stadelmann', 'manual'),
 ]
 
+# The name of an image file (relative to this directory) to place at the top of
+# the title page.
+#
+# latex_logo = None
+latex_logo = './img/Boeing_Assembly_Line.jpg'
+
+# If true, show page references after internal links.
+#
+# latex_show_pagerefs = False
+
+# If true, show URL addresses after external links.
+#
+# latex_show_urls = False
+
+# Documents to append as an appendix to all manuals.
+#
+# latex_appendices = []
+
+# If false, no module index is generated.
+#
+# latex_domain_indices = True
 
 # -- Options for manual page output ------------------------------------------
 
