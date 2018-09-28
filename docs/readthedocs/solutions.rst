@@ -2,9 +2,9 @@
 Solutions à étudier
 ###############################
 
-=====================================================
+==================================================================
 `OCA - Odoo Community Association <https://odoo-community.org>`_
-=====================================================
+==================================================================
 
 -   `manufacture <https://github.com/OCA/manufacture>`_
 -   `manufacture-reporting <https://github.com/OCA/manufacture-reporting>`_

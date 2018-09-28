@@ -7,8 +7,8 @@ Objectifs du test
 
         - Vérifier que le système achète et fabrique au plus tard en fonction des conditions suivantes :
 
-            - Aucun stock
-            - Article en gestion MTO ou MTS
+            - Aucun stock, hormi le produit "A" avec 60 pces on Hand 
+            - Articles en gestion MTO et MTS
             - Régles de réapprovisionnement à zéro (Min : 0 / Max : 0 / Multiple : 1 / 0 days to purchase)
             - Prévisions de vente enregistrées sur les produits finaux et intermédiaires
 
