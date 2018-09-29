@@ -1,8 +1,6 @@
-
 ################################################
 Le fonctionnement logistique du système Odoo V11
 ################################################
-
 
 =====================================================
 Le processus standard
@@ -35,7 +33,7 @@ Ce schéma décrit les emplacements de stock de stocks standards du système Odo
         :align: center
 
     :download:`Routes et Emplacements de stock (pdf) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.pdf>`
-    
+
     :download:`Routes et Emplacements de stock (svg) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.svg>`
 
 Les entrepôts
