@@ -9,7 +9,7 @@ La société fictive "Open Bike SF"
 
 Dans le but d'assurer une certaine **cohérence des tests** à réaliser, nous utiliserons un **jeu de test** basé sur une **société fictive "Open Bike SF (OBSF)"**.
 
-OBSF commercialise des **vélos haut de gamme**, principalement en Europe. Elle a été fondée il y a 5 ans par trois ingénieurs passionnés de cyclisme.
+:index:OBSF commercialise des **vélos haut de gamme**, principalement en Europe. Elle a été fondée il y a 5 ans par trois ingénieurs passionnés de cyclisme.
 
 Les grands avantages des vélos OBSF sont :
 
