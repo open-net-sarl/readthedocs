@@ -42,10 +42,12 @@ A mon sens, la bonne pratique en terme d'implémentation et d'adaptation d'un ER
 Si ce n'est pas le cas, nous aurons le choix entre :
 
     #. Rester dans la philosophie du système,
+
         - en proposant un flux alternatif standard au client, ou
         - adapter le système par du paramètrage
 
     #. Adapter / Raccourcir le flux
+
         - par du code sur un user-exit
         - par un module de code dédié
 
@@ -116,6 +118,7 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
     Dans l'étude, nous nous intéresserons **uniquement à la fabrication discrète**, qui traite de produits tels que montres, voitures, machines, etc.
     
     Pour fabriquer un objet discret, nous parlerons de ``nomenclatures`` (Bill of Materials - BOM en anglais), qui précisent que pour fabriquer 1 voiture, il faut :
+    
         - 1 chassis,
         - 1 moteur et
         - 4 roues.
