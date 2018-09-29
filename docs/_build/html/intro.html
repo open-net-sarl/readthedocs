@@ -83,7 +83,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#cadre-de-l-etude">Cadre de l’étude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#deroulement-de-l-etude">Déroulement de l’étude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#la-fabrication">La fabrication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-logistique-les-operations-la-fabrication">La logistique, les opérations, la fabrication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#licence">Licence</a></li>
 </ul>
 </li>
@@ -161,7 +161,7 @@
 <h1>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="cadre-de-l-etude">
 <h2>Cadre de l’étude<a class="headerlink" href="#cadre-de-l-etude" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Cette documentation est établie dans le cadre de mon travail de diplôme de <a class="reference external" href="http://www.esig-jura.ch">l’Ecole Supérieure d’Informatique de Gestion</a> de <a class="reference external" href="https://en.wikipedia.org/wiki/Delémont">Delémont</a>.</p>
+<p>Cette documentation est établie dans le cadre de mon travail de diplôme de <a class="reference external" href="http://www.esig-jura.ch">l’Ecole Supérieure d’Informatique de Gestion</a> de <a class="reference external" href="https://en.wikipedia.org/wiki/Delémont">Delémont</a>, et porte sur le fonctionnement logistique du système ERP Odoo V11e.</p>
 <p>Etudier le fonctionnement logistique d’un système ERP et proposer des solutions d’amélioration nécessite une expérience terrain importante, sachant que l’équivalent sur un corps humain reviendrait à étudier l’ensemble du système sanguin, probablement quelques mécanismes du système nerveux, voire le système limphatique.</p>
 <p>Longtemps, on a par exemple soigné la fièvre par <a class="reference external" href="https://fr.wikipedia.org/wiki/Saignée_(médecine)">des saignées</a>, jusqu’au jour où on s’est aperçu que la situation du malade se dégradait plus qu’elle ne s’améliorait.</p>
 <blockquote>
@@ -222,8 +222,65 @@
 </div>
 </div></blockquote>
 </div>
-<div class="section" id="la-fabrication">
-<h2>La fabrication<a class="headerlink" href="#la-fabrication" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="la-logistique-les-operations-la-fabrication">
+<h2>La logistique, les opérations, la fabrication<a class="headerlink" href="#la-logistique-les-operations-la-fabrication" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans le cadre de ce travail, nous vérifierons si le système Odoo permet à une entreprise manufacturière de fournir des biens industriels à un client, en s’approvisionnant en matière premières, en les transformant, en les stockant et en les livrant.</p>
+<p>Nous nous intéresserons principalement aux flux, à la transformation et au stockage des articles. Nous regrouperons l’ensemble de ces activités sous le terme générique d”<strong>opérations</strong>. Nous associerons le terme <strong>fabrication</strong> ou <strong>manufacturing</strong> aux opérations de transformation d’éléments vers un composé de nature différente.</p>
+<p>Avant de nous lancer dans l’étude à proprement parler, nous allons encore définir quelques éléments de compréhension.</p>
+<div class="admonition-on-ne-fait-pas-d-omelette-sans-casser-des-oeufs admonition">
+<p class="first admonition-title">On ne fait pas d’omelette sans casser des oeufs !</p>
+<p>Arrêtons-nous quelques instants sur cette <a class="reference external" href="https://fr.wiktionary.org/wiki/on_ne_fait_pas_d’omelette_sans_casser_des_œufs">locution populaire</a>, qui signifie que lorsque on veut entreprendre quelque chose, il faut en accepter les risques. Cela s’applique bien entendu à la fabrication et à la probabilité que le résultat final ne soit pas toujours celui escompté.</p>
+<blockquote>
+<div><div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/oeuf_casse.jpg"><img alt="Oeuf casse" src="_images/oeuf_casse.jpg" style="width: 299.6px; height: 200.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.bioalaune.com/fr/actualite-bio/12067/non-au-gaspillage-alimentaire-cinq-astuces-utiliser-blancs-doeufs">Oeuf cassé (Crédit bioalaune.com)</a></span></p>
+</div>
+</div></blockquote>
+<p>Intéressons nous maintenant à la forme littérale de cette phrase…</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>On apprend tout d’abord que pour pour fabriquer une omelette, il faut des oeufs.</li>
+</ul>
+<p>On ne nous dit pas toutefois combien d’oeufs sont nécessaire, ni le temps de cuisson pour que l’on puisse parler d’omelette. En cuisine, la méthode d’obtention d’une omelette s’appelle <code class="docutils literal notranslate"><span class="pre">une</span> <span class="pre">recette</span></code>.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/recette_omelette.png"><img alt="Recette d'une omelette simple" src="_images/recette_omelette.png" style="width: 473.9px; height: 375.2px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.cuisineaz.com/recettes/omelette-simple-56045.aspx">Recette d’une omelette simple (Crédit https://www.cuisineaz.com)</a></span></p>
+</div>
+<p>On réalise que pour cuisiner (fabriquer) une omelette de qualité et de taille satisfaisante pour <strong>une personne</strong>, il faut des ingrédients dans <strong>une quantité bien déterminée</strong>.
+D’autre part, la préparation des ingrédients se réalise en <strong>deux étapes distinctes</strong> impliquant des <code class="docutils literal notranslate"><span class="pre">opérations</span></code> précises (Etape 1 : Battez…, Etape 2 : Faites chauffer…).</p>
+<p>Cette recette est probablement suffisante pour le repas du soir, mais dans un milieu industriel, elle est insuffisamment précise. En effet, on obtiendra une omellette de taille différente selon la taille des oeufs.</p>
+<p>En termes industriels, on parlera de <code class="docutils literal notranslate"><span class="pre">fabrication</span> <span class="pre">en</span> <span class="pre">process</span></code> dans le cas où le produit est obtenu sur la base d’une formule ou d’une recette, et que les ingrédients qui le compose ne peuvent plus être facilement dissociés après la transformation. Par opposition, on parlera de <code class="docutils literal notranslate"><span class="pre">fabrication</span> <span class="pre">discrète</span></code> lorsque le produit obtenu peut être facilement touché, vu ou compté.</p>
+<p>Dans l’étude, nous nous intéresserons <strong>uniquement à la fabrication discrète</strong>, qui traite de produits tels que montres, voitures, machines, etc.</p>
+<dl class="docutils">
+<dt>Pour fabriquer un objet discret, nous parlerons de <code class="docutils literal notranslate"><span class="pre">nomenclatures</span></code> (Bill of Materials - BOM en anglais), qui précisent que pour fabriquer 1 voiture, il faut :</dt>
+<dd><ul class="first last simple">
+<li>1 chassis,</li>
+<li>1 moteur et</li>
+<li>4 roues.</li>
+</ul>
+</dd>
+</dl>
+<p>et de <code class="docutils literal notranslate"><span class="pre">gammes</span> <span class="pre">de</span> <span class="pre">fabrication</span></code> ou <code class="docutils literal notranslate"><span class="pre">gammes</span> <span class="pre">opératoires</span></code> (routings en anglais), qui définissent la séquence des opérations d’usinage/assemblage, les <code class="docutils literal notranslate"><span class="pre">ressources</span></code> nécessaires (machines, outils, main d’oeuvre, qualitification, énergie, fluides, etc.).</p>
+<p>Une <code class="docutils literal notranslate"><span class="pre">nomenclature</span> <span class="pre">multi-niveaux</span></code> est le résultat de nomenclatures «&nbsp;imbriquées&nbsp;». Par exemple, pour produire une voiture, il faut un moteur, lui même composé d’un bloc moteur et de 4 pistons. On comprendra ainsi qu’avant de pouvoir assembler la voiture, il aura fallu au préalable obtenir de l’acier pour réaliser les 4 pistons, puis assembler les pistons et le bloc pour former le moteur, et finalement assembler le moteur, les roues et le chassis.</p>
+<p>Cette séquence est jalonnée de contraintes, de nature temporelles, physiques (volumes, quantité disponible, ressources) et financières (cash flow).</p>
+<p>On comprendra également que l’on ne produira pas forcément les moteurs dans les mêmes quantités (<code class="docutils literal notranslate"><span class="pre">taille</span> <span class="pre">de</span> <span class="pre">lot</span></code>) et au même endroit que les voitures. Ainsi les notions de <code class="docutils literal notranslate"><span class="pre">stockage</span></code>, d” <code class="docutils literal notranslate"><span class="pre">emplacement</span> <span class="pre">de</span> <span class="pre">stock</span></code>, d” <code class="docutils literal notranslate"><span class="pre">entrepôt</span></code> et de <code class="docutils literal notranslate"><span class="pre">transport</span></code> interviennent.</p>
+<p>D’autre part, une entreprise maximisera ses ventes en proposant ses produits à sa clientèle, à un délai acceptable par celle-ci. Elle pourra être temptée d’anticiper les besoins des clients et de produire et stocker massivement. Mais dans ce cas, si les prévisions s’avèrent surévaluées, le stock deviendra obsolète et ne pourra plus être vendu.</p>
+<p>Pour éviter cela, on recherchera constamment à minimiser les valeurs en stock, en standardisant les produits et en approvisionnant au dernier moment. Citons encore deux techniques fondamentales d’approvisionnement :</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">le</span> <span class="pre">flux</span> <span class="pre">poussé</span></code> : dans ce contexte, une prévision de vente va engendrer l’approvisionnement de tous les composants nécessaires, lesquels vont remonter progressivement vers les stocks de produits semi-finis, puis vers les stocks de produits finis. Dans le cas de notre omelette, si le délai de fabrication est de trois jours, il faudra prévoir ce que nous voulons manger dans trois jours, et nous y tenir !</li>
+<li><code class="docutils literal notranslate"><span class="pre">le</span> <span class="pre">flux</span> <span class="pre">tiré</span></code> : dans cette situation, le réapprovisionnement n’a lieu que lorsque le stock a été consommé. Dans le cas de notre omelette, cela signifie dans nous maintenons un petit stock d’oeufs (<code class="docutils literal notranslate"><span class="pre">stock</span> <span class="pre">intermédiaire</span></code>), et que lorsque nous les utilisons pour réaliser une omelette, nous recomplétons ce stock. On parlera également de <code class="docutils literal notranslate"><span class="pre">juste-à-temps</span></code> lorsque le stock arrive au moment de sa consommation. Notre omelette est cuisinée juste-à-temps pour le repas du soir !</li>
+</ul>
+</div></blockquote>
+<p>Bon appétit !</p>
+<blockquote>
+<div><div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/omelette.jpg"><img alt="Omelette" src="_images/omelette.jpg" style="width: 300.0px; height: 272.4px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.bbcgoodfood.com/recipes/1669/ultimate-french-omelette">Omelette (Crédit bbcgoodfood.com)</a></span></p>
+</div>
+</div></blockquote>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="licence">
 <h2>Licence<a class="headerlink" href="#licence" title="Lien permanent vers ce titre">¶</a></h2>

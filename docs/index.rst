@@ -12,7 +12,6 @@ Etude Odoo V11 Opérations
    :name: mastertoc
 
    intro
-   readthedocs/operations
    readthedocs/fonctionnement
    readthedocs/study
    readthedocs/solutions
