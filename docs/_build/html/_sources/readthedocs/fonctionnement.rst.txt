@@ -28,7 +28,7 @@ Démonstration
 La structure logistique
 =====================================================
 
-    .. figure:: ../img/routes_et_emplacements01.png
+    .. figure:: ../img/routes_et_emplacements01.svg
         :scale: 70%
         :alt: Routes et Emplacements de stock
         :align: center
