@@ -16,11 +16,11 @@ Annexes
     \clearpage
 
 =================================================
-Routes et emplacements de stock
+Le Processus standard AS-IS
 =================================================
 
-    .. figure:: ./img/routes_et_emplacements01_portrait.png
-        :alt: Routes et Emplacements de stock
+    .. figure:: ./img/Odoo11_Process_AS-IS_portrait.png
+        :alt: Process AS-IS
         :align: center
 
 .. raw:: latex
