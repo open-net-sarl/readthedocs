@@ -133,6 +133,7 @@ latex_elements = {
         \usepackage{charter}
         \usepackage[defaultsans]{lato}
         \usepackage{inconsolata}
+        \renewcommand{\baselinestretch}{1.5}
     ''',
 
     # Latex figure (float) alignment
