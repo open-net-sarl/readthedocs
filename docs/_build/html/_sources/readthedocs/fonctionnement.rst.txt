@@ -36,13 +36,21 @@ Ce schéma décrit les emplacements de stock de stocks standards du système Odo
 
     :download:`Routes et Emplacements de stock (svg) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.svg>`
 
-.. table::
-    :width: 30 70
-
 =========================  =============================================================================
 Type d'emplacement         Description
-Emplacement fournisseur    un emplacement virtuel qui correspond à l'emplacement d'origine 
+Emplacement fournisseur    Un emplacement virtuel qui correspond à l'emplacement d'origine 
                            des produits issus de vos fournisseurs. 
+Vue                        Emplacement virtuel utilisé pour créer des structures hiérarchiques pour votre entrepôt, en agrégeant
+                           ses emplacements enfants ; ne peut pas directement contenir de produits.
+Emplacement interne        L'emplacement physique dans votre entrepôt.
+Emplacement client         Un emplacement virtuel qui correspond à l'emplacement de destination des produits envoyés à vos clients.
+Perte de stock             Emplacement virtuel servant de contre-valeur aux opérations d'inventaire utilisées pour corriger les niveaux de stock                                        (inventaires physiques).
+Approvisionnement          Emplacement virtuel servant de contre-valeur temporaire pour les opérations d'approvisionnement lorsque la source
+                           (fournisseur ou fabrication) n'est pas encore connue. Normalement, cet emplacement est vide une fois que le
+                           planificateur d'approvisionnement a fini de s'exécuter.
+Fabrication                Emplacement virtuel de contre-valeur pour les opérations de fabrication.
+                           Cet emplacement consomme des matières premières et fabrique des produits finis.
+Emplacement de transit     emplacement physique de contre-valeur à utiliser pour les opérations inter-entreprises et inter-entrepôts.
 =========================  =============================================================================
 
 Les entrepôts

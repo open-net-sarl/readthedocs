@@ -198,16 +198,41 @@
 </div></blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="75%" />
+<col width="12%" />
+<col width="88%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td>Type d’emplacement</td>
 <td>Description</td>
 </tr>
 <tr class="row-even"><td>Emplacement fournisseur</td>
-<td>un emplacement virtuel qui correspond à l’emplacement d’origine
+<td>Un emplacement virtuel qui correspond à l’emplacement d’origine
 des produits issus de vos fournisseurs.</td>
+</tr>
+<tr class="row-odd"><td>Vue</td>
+<td>Emplacement virtuel utilisé pour créer des structures hiérarchiques pour votre entrepôt, en agrégeant
+ses emplacements enfants ; ne peut pas directement contenir de produits.</td>
+</tr>
+<tr class="row-even"><td>Emplacement interne</td>
+<td>L’emplacement physique dans votre entrepôt.</td>
+</tr>
+<tr class="row-odd"><td>Emplacement client</td>
+<td>Un emplacement virtuel qui correspond à l’emplacement de destination des produits envoyés à vos clients.</td>
+</tr>
+<tr class="row-even"><td>Perte de stock</td>
+<td>Emplacement virtuel servant de contre-valeur aux opérations d’inventaire utilisées pour corriger les niveaux de stock                                        (inventaires physiques).</td>
+</tr>
+<tr class="row-odd"><td>Approvisionnement</td>
+<td>Emplacement virtuel servant de contre-valeur temporaire pour les opérations d’approvisionnement lorsque la source
+(fournisseur ou fabrication) n’est pas encore connue. Normalement, cet emplacement est vide une fois que le
+planificateur d’approvisionnement a fini de s’exécuter.</td>
+</tr>
+<tr class="row-even"><td>Fabrication</td>
+<td>Emplacement virtuel de contre-valeur pour les opérations de fabrication.
+Cet emplacement consomme des matières premières et fabrique des produits finis.</td>
+</tr>
+<tr class="row-odd"><td>Emplacement de transit</td>
+<td>emplacement physique de contre-valeur à utiliser pour les opérations inter-entreprises et inter-entrepôts.</td>
 </tr>
 </tbody>
 </table>
