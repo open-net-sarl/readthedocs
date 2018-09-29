@@ -28,12 +28,14 @@ Démonstration
 La structure logistique
 =====================================================
 
-    .. figure:: ../img/routes_et_emplacements01.svg
-        :scale: 70%
+Ce schéma décrit les emplacements de stock de stocks standards du système Odoo de base, avec leurs parents respectifs (Société, Entrepôt, Emplacement parent). Les routes entre ces emplacements sont également spécifiées.
+
+    .. figure:: ../img/routes_et_emplacements01_map_paysage.png
         :alt: Routes et Emplacements de stock
         :align: center
 
     :download:`Routes et Emplacements de stock (pdf) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.pdf>`
+    :download:`Routes et Emplacements de stock (svg) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.svg>`
 
 Les entrepôts
 -------------------------
