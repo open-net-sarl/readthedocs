@@ -96,12 +96,12 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
     On ne nous dit pas toutefois combien d'oeufs sont nécessaire, ni le temps de cuisson pour que l'on puisse parler d'omelette. En cuisine, la méthode d'obtention d'une omelette s'appelle ``une recette``.
 
     
-    .. figure:: ./img/recette_omelette.png
-        :alt: Recette d'une omelette simple
-        :scale: 70%
-        :align: center
+        .. figure:: ./img/recette_omelette.png
+            :alt: Recette d'une omelette simple
+            :scale: 70%
+            :align: center
 
-        `Recette d'une omelette simple (Crédit https://www.cuisineaz.com) <https://www.cuisineaz.com/recettes/omelette-simple-56045.aspx>`_
+            `Recette d'une omelette simple (Crédit https://www.cuisineaz.com) <https://www.cuisineaz.com/recettes/omelette-simple-56045.aspx>`_
 
     On réalise que pour cuisiner (fabriquer) une omelette de qualité et de taille satisfaisante pour **une personne**, il faut des ingrédients dans **une quantité bien déterminée**. 
     D'autre part, la préparation des ingrédients se réalise en **deux étapes distinctes** impliquant des ``opérations`` précises (Etape 1 : Battez..., Etape 2 : Faites chauffer...).
