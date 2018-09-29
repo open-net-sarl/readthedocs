@@ -134,8 +134,8 @@ latex_elements = {
         \usepackage[defaultsans]{lato}
         \usepackage{inconsolata}
         \setlength{\parindent}{4em}
-        \setlength{\parskip}{1em}
-        \renewcommand{\baselinestretch}{1.3}
+        \setlength{\parskip}{1.5em}
+        \renewcommand{\baselinestretch}{1.4}
     ''',
 
     # Latex figure (float) alignment
