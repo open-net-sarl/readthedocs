@@ -26,7 +26,21 @@ Démonstration
 La structure logistique
 =====================================================
 
+:index:`Entrepôt` (:index:`Warehouse`)
+-------------------------
+Un entrepôt est le bâtiment où les articles sont stockés.
+
+:index:`Emplacement de stock` (:index:`Stock Location`)
+-------------------------------------
+
+Un emplacement est un espace spécifique dans l'entrepôt. Il peut être considéré comme une sous-localisation de l'entrepôt, ça peut être une étagère, un plancher, une allée, etc... Par conséquent, un emplacement fait partie d'un seul entrepôt et il est impossible de relier un emplacement à plusieurs entrepôts. Il est configurer autant d'emplacements que souhaité dans un entrepôt.
+
 Ce schéma décrit les emplacements de stock de stocks standards du système Odoo de base, avec leurs parents respectifs (Société, Entrepôt, Emplacement parent). Les routes entre ces emplacements sont également spécifiées.
+
+Deux entrepôts de la même société peuvent échanger du stock en passant par une zone de transit, appartenant à la société, mais hors entrepôt. 
+
+Schéma des flux
+---------------
 
     .. figure:: ../img/routes_et_emplacements01_map_paysage.png
         :alt: Routes et Emplacements de stock
@@ -44,14 +58,6 @@ Ce schéma décrit les emplacements de stock de stocks standards du système Odo
 :Emplacement de transit: emplacement physique de contre-valeur à utiliser pour les opérations inter-entreprises et inter-entrepôts.
 
 
-:index:`Entrepôt` (:index:`Warehouse`)
--------------------------
-Un entrepôt est le bâtiment où les articles sont stockés.
-
-:index:`Emplacement de stock` (:index:`Stock Location`)
--------------------------------------
-
-Un emplacement est un espace spécifique dans l'entrepôt. Il peut être considéré comme une sous-localisation de l'entrepôt, ça peut être une étagère, un plancher, une allée, etc... Par conséquent, un emplacement fait partie d'un seul entrepôt et il est impossible de relier un emplacement à plusieurs entrepôts. Il est configurer autant d'emplacements que souhaité dans un entrepôt.
 
 =====================================================
 Les flux internes et externes
