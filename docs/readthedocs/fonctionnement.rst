@@ -37,7 +37,7 @@ Ce schéma décrit les emplacements de stock de stocks standards du système Odo
     :download:`Routes et Emplacements de stock (svg) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.svg>`
 
 .. table::
-    :width: 100
+    :width: 30 70
 
 =========================  =============================================================================
 Type d'emplacement         Description
