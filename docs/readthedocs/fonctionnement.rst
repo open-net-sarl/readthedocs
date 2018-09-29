@@ -36,6 +36,15 @@ Ce schéma décrit les emplacements de stock de stocks standards du système Odo
 
     :download:`Routes et Emplacements de stock (svg) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.svg>`
 
+.. table::
+    :width: 100
+
+=========================  =============================================================================
+Type d'emplacement         Description
+Emplacement fournisseur    un emplacement virtuel qui correspond à l'emplacement d'origine 
+                           des produits issus de vos fournisseurs. 
+=========================  =============================================================================
+
 Les entrepôts
 -------------------------
 
