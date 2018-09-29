@@ -3,7 +3,7 @@ Le fonctionnement logistique du système Odoo V11
 ################################################
 
 =====================================================
-Le processus standard
+Le :index:`processus standard`
 =====================================================
 
 Le processus intégré depuis la vente
@@ -19,7 +19,7 @@ Le processus intégré depuis la vente
 Démonstration
 -----------------
 
-    :download:`Démonstration "Enregistrement d'une commande pour un vélo" <./media/odooV11e_demo_velos_mto_v01.pdf>`
+:download:`Démonstration "Enregistrement d'une commande pour un vélo" <./media/odooV11e_demo_velos_mto_v01.pdf>`
 
 
 =====================================================
@@ -48,7 +48,7 @@ Schéma des flux
 
     :download:`Routes et Emplacements de stock (pdf) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.pdf>` :download:`(svg) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.svg>`
 
-:Emplacement fournisseur: Un emplacement virtuel qui correspond à l'emplacement d'origine des produits issus de vos fournisseurs.
+:index:`Emplacement fournisseur`: Un emplacement virtuel qui correspond à l'emplacement d'origine des produits issus de vos fournisseurs.
 :Vue: Emplacement virtuel utilisé pour créer des structures hiérarchiques pour votre entrepôt, en agrégeant ses emplacements enfants ; ne peut pas directement contenir de produits.
 :Emplacement interne: L'emplacement physique dans votre entrepôt.
 :Emplacement client: Un emplacement virtuel qui correspond à l'emplacement de destination des produits envoyés à vos clients.

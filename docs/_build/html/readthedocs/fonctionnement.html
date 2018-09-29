@@ -171,7 +171,7 @@
   <div class="section" id="le-fonctionnement-logistique-du-systeme-odoo-v11">
 <h1>Le fonctionnement logistique du système Odoo V11<a class="headerlink" href="#le-fonctionnement-logistique-du-systeme-odoo-v11" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="le-processus-standard">
-<h2>Le processus standard<a class="headerlink" href="#le-processus-standard" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Le <span class="target" id="index-0"></span>processus standard<a class="headerlink" href="#le-processus-standard" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="le-processus-integre-depuis-la-vente">
 <h3>Le processus intégré depuis la vente<a class="headerlink" href="#le-processus-integre-depuis-la-vente" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="figure align-center">
@@ -181,18 +181,17 @@
 </div>
 <div class="section" id="demonstration">
 <h3>Démonstration<a class="headerlink" href="#demonstration" title="Lien permanent vers ce titre">¶</a></h3>
-<blockquote>
-<div><a class="reference download internal" href="../_downloads/odooV11e_demo_velos_mto_v01.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Démonstration</span> <span class="pre">&quot;Enregistrement</span> <span class="pre">d'une</span> <span class="pre">commande</span> <span class="pre">pour</span> <span class="pre">un</span> <span class="pre">vélo&quot;</span></code></a></div></blockquote>
+<p><a class="reference download internal" href="../_downloads/odooV11e_demo_velos_mto_v01.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Démonstration</span> <span class="pre">&quot;Enregistrement</span> <span class="pre">d'une</span> <span class="pre">commande</span> <span class="pre">pour</span> <span class="pre">un</span> <span class="pre">vélo&quot;</span></code></a></p>
 </div>
 </div>
 <div class="section" id="la-structure-logistique">
 <h2>La structure logistique<a class="headerlink" href="#la-structure-logistique" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="entrepot-warehouse">
-<h3><span class="target" id="index-0"></span>Entrepôt (<span class="target" id="index-1"></span>Warehouse)<a class="headerlink" href="#entrepot-warehouse" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><span class="target" id="index-1"></span>Entrepôt (<span class="target" id="index-2"></span>Warehouse)<a class="headerlink" href="#entrepot-warehouse" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Un entrepôt est le bâtiment où les articles sont stockés.</p>
 </div>
 <div class="section" id="emplacement-de-stock-stock-location">
-<h3><span class="target" id="index-2"></span>Emplacement de stock (<span class="target" id="index-3"></span>Stock Location)<a class="headerlink" href="#emplacement-de-stock-stock-location" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><span class="target" id="index-3"></span>Emplacement de stock (<span class="target" id="index-4"></span>Stock Location)<a class="headerlink" href="#emplacement-de-stock-stock-location" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Un emplacement est un espace spécifique dans l’entrepôt. Il peut être considéré comme une sous-localisation de l’entrepôt, ça peut être une étagère, un plancher, une allée, etc… Par conséquent, un emplacement fait partie d’un seul entrepôt et il est impossible de relier un emplacement à plusieurs entrepôts. Il est configurer autant d’emplacements que souhaité dans un entrepôt.</p>
 <p>Ce schéma décrit les emplacements de stock de stocks standards du système Odoo de base, avec leurs parents respectifs (Société, Entrepôt, Emplacement parent). Les routes entre ces emplacements sont également spécifiées.</p>
 <p>Deux entrepôts de la même société peuvent échanger du stock en passant par une zone de transit, appartenant à la société, mais hors entrepôt.</p>
@@ -205,33 +204,14 @@
 </div>
 <p><a class="reference download internal" href="../_downloads/Odoo11_Routes_et_Emplacements_de_stock_V02.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Routes</span> <span class="pre">et</span> <span class="pre">Emplacements</span> <span class="pre">de</span> <span class="pre">stock</span> <span class="pre">(pdf)</span></code></a> <a class="reference download internal" href="../_downloads/Odoo11_Routes_et_Emplacements_de_stock_V02.svg" download=""><code class="xref download docutils literal notranslate"><span class="pre">(svg)</span></code></a></p>
 </div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">Emplacement fournisseur:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Un emplacement virtuel qui correspond à l’emplacement d’origine des produits issus de vos fournisseurs.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Vue:</th><td class="field-body">Emplacement virtuel utilisé pour créer des structures hiérarchiques pour votre entrepôt, en agrégeant ses emplacements enfants ; ne peut pas directement contenir de produits.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">Emplacement interne:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">L’emplacement physique dans votre entrepôt.</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Emplacement client:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Un emplacement virtuel qui correspond à l’emplacement de destination des produits envoyés à vos clients.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Perte de stock:</th><td class="field-body">Emplacement virtuel servant de contre-valeur aux opérations d’inventaire utilisées pour corriger les niveaux de stock (inventaires physiques).</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Approvisionnement:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Emplacement virtuel servant de contre-valeur temporaire pour les opérations d’approvisionnement lorsque la source (fournisseur ou fabrication) n’est pas encore connue. Normalement, cet emplacement est vide une fois que le planificateur d’approvisionnement a fini de s’exécuter.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Fabrication:</th><td class="field-body">Emplacement virtuel de contre-valeur pour les opérations de fabrication. Cet emplacement consomme des matières premières et fabrique des produits finis.</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">Emplacement de transit:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">emplacement physique de contre-valeur à utiliser pour les opérations inter-entreprises et inter-entrepôts.</td>
-</tr>
-</tbody>
-</table>
+<p><span class="target" id="index-5"></span>Emplacement fournisseur: Un emplacement virtuel qui correspond à l’emplacement d’origine des produits issus de vos fournisseurs.
+:Vue: Emplacement virtuel utilisé pour créer des structures hiérarchiques pour votre entrepôt, en agrégeant ses emplacements enfants ; ne peut pas directement contenir de produits.
+:Emplacement interne: L’emplacement physique dans votre entrepôt.
+:Emplacement client: Un emplacement virtuel qui correspond à l’emplacement de destination des produits envoyés à vos clients.
+:Perte de stock: Emplacement virtuel servant de contre-valeur aux opérations d’inventaire utilisées pour corriger les niveaux de stock (inventaires physiques).
+:Approvisionnement: Emplacement virtuel servant de contre-valeur temporaire pour les opérations d’approvisionnement lorsque la source (fournisseur ou fabrication) n’est pas encore connue. Normalement, cet emplacement est vide une fois que le planificateur d’approvisionnement a fini de s’exécuter.
+:Fabrication: Emplacement virtuel de contre-valeur pour les opérations de fabrication. Cet emplacement consomme des matières premières et fabrique des produits finis.
+:Emplacement de transit: emplacement physique de contre-valeur à utiliser pour les opérations inter-entreprises et inter-entrepôts.</p>
 </div>
 </div>
 <div class="section" id="les-flux-internes-et-externes">
