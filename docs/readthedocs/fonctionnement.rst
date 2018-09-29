@@ -32,9 +32,7 @@ Ce schéma décrit les emplacements de stock de stocks standards du système Odo
         :alt: Routes et Emplacements de stock
         :align: center
 
-    :download:`Routes et Emplacements de stock (pdf) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.pdf>`
-
-    :download:`Routes et Emplacements de stock (svg) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.svg>`
+    :download:`Routes et Emplacements de stock (pdf) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.pdf>` :download:`(svg) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.svg>`
 
 :Emplacement fournisseur: Un emplacement virtuel qui correspond à l'emplacement d'origine des produits issus de vos fournisseurs.
 :Vue: Emplacement virtuel utilisé pour créer des structures hiérarchiques pour votre entrepôt, en agrégeant ses emplacements enfants ; ne peut pas directement contenir de produits.
@@ -46,11 +44,14 @@ Ce schéma décrit les emplacements de stock de stocks standards du système Odo
 :Emplacement de transit: emplacement physique de contre-valeur à utiliser pour les opérations inter-entreprises et inter-entrepôts.
 
 
-Les entrepôts
+:index:`Entrepôt` (:index:`Warehouse`)
 -------------------------
+Un entrepôt est le bâtiment où les articles sont stockés.
 
-Les emplacements de stock
--------------------------
+:index:`Emplacement de stock` (:index:`Stock Location`)
+-------------------------------------
+
+Un emplacement est un espace spécifique dans l'entrepôt. Il peut être considéré comme une sous-localisation de l'entrepôt, ça peut être une étagère, un plancher, une allée, etc... Par conséquent, un emplacement fait partie d'un seul entrepôt et il est impossible de relier un emplacement à plusieurs entrepôts. Il est configurer autant d'emplacements que souhaité dans un entrepôt.
 
 =====================================================
 Les flux internes et externes
