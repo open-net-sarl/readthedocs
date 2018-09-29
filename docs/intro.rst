@@ -93,20 +93,18 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
 
         `Oeuf cassé (Crédit bioalaune.com) <https://www.bioalaune.com/fr/actualite-bio/12067/non-au-gaspillage-alimentaire-cinq-astuces-utiliser-blancs-doeufs>`_
 
-
    Intéressons nous maintenant à la forme littérale de cette phrase...
 
     - On apprend tout d'abord que pour pour fabriquer une omelette, il faut des oeufs. 
     
     On ne nous dit pas toutefois combien d'oeufs sont nécessaire, ni le temps de cuisson pour que l'on puisse parler d'omelette. En cuisine, la méthode d'obtention d'une omelette s'appelle ``une recette``.
 
-    
-        .. figure:: ./img/recette_omelette.png
-            :alt: Recette d'une omelette simple
-            :scale: 70%
-            :align: center
+    .. figure:: ./img/recette_omelette.png
+        :alt: Recette d'une omelette simple
+        :scale: 70%
+        :align: center
 
-            `Recette d'une omelette simple (Crédit https://www.cuisineaz.com) <https://www.cuisineaz.com/recettes/omelette-simple-56045.aspx>`_
+        `Recette d'une omelette simple (Crédit https://www.cuisineaz.com) <https://www.cuisineaz.com/recettes/omelette-simple-56045.aspx>`_
 
     On réalise que pour cuisiner (fabriquer) une omelette de qualité et de taille satisfaisante pour **une personne**, il faut des ingrédients dans **une quantité bien déterminée**. 
     D'autre part, la préparation des ingrédients se réalise en **deux étapes distinctes** impliquant des ``opérations`` précises (Etape 1 : Battez..., Etape 2 : Faites chauffer...).
@@ -118,7 +116,7 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
     Dans l'étude, nous nous intéresserons **uniquement à la fabrication discrète**, qui traite de produits tels que montres, voitures, machines, etc.
     
     Pour fabriquer un objet discret, nous parlerons de ``nomenclatures`` (Bill of Materials - BOM en anglais), qui précisent que pour fabriquer 1 voiture, il faut :
-    
+
         - 1 chassis,
         - 1 moteur et
         - 4 roues.
