@@ -9,12 +9,12 @@ Le processus standard
 Le processus intégré depuis la vente
 ------------------------------------
 
-    .. figure:: ../img/processus_commercial_standard01.png
-        :alt: Processus logistique et commercial standard
-        :scale: 60%
-        :align: center
+.. figure:: ../img/processus_commercial_standard01.png
+    :alt: Processus logistique et commercial standard
+    :scale: 60%
+    :align: center
 
-    :download:`Processus logistique et commercial standard (pdf)  <./media/Odoo11_Process_AS-IS.pdf>`  :download:`(png)  <./media/Odoo11_Process_AS-IS.png>`  :download:`(svg)  <./media/Odoo11_Process_AS-IS.svg>`
+:download:`Processus logistique et commercial standard (pdf)  <./media/Odoo11_Process_AS-IS.pdf>`  :download:`(png)  <./media/Odoo11_Process_AS-IS.png>`  :download:`(svg)  <./media/Odoo11_Process_AS-IS.svg>`
 
 Démonstration
 -----------------
@@ -27,11 +27,11 @@ La structure logistique
 =====================================================
 
 :index:`Entrepôt` (:index:`Warehouse`)
--------------------------
+--------------------------------------------
 Un entrepôt est le bâtiment où les articles sont stockés.
 
 :index:`Emplacement de stock` (:index:`Stock Location`)
--------------------------------------
+--------------------------------------------------------------
 
 Un emplacement est un espace spécifique dans l'entrepôt. Il peut être considéré comme une sous-localisation de l'entrepôt, ça peut être une étagère, un plancher, une allée, etc... Par conséquent, un emplacement fait partie d'un seul entrepôt et il est impossible de relier un emplacement à plusieurs entrepôts. Il est configurer autant d'emplacements que souhaité dans un entrepôt.
 
