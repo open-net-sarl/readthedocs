@@ -33,15 +33,18 @@ Déroulement de l'étude
 Le mandat du travail de diplôme porte sur l'analyse du système logistique "tel quel", sur l'établissement de propositions d'améliorations en relation avec le manufacturing complexe, et le codage d'un ou plusieurs modules de correction.
 
 A mon sens, la bonne pratique en terme d'implémentation et d'adaptation d'un ERP à une entreprise est :
+
     #. Etude et compréhension de la philosophie du système ERP
     #. Etude et compréhension des besoins du client en terme de gestion, au sens large
     #. Identification des objets du système ERP répondant aux besoins
     #. Vérifier si les flux entre les objets répondent aux exigences
 
 Si ce n'est pas le cas, nous aurons le choix entre :
+
     #. Rester dans la philosophie du système,
         - en proposant un flux alternatif standard au client, ou
         - adapter le système par du paramètrage
+
     #. Adapter / Raccourcir le flux
         - par du code sur un user-exit
         - par un module de code dédié
