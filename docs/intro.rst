@@ -6,7 +6,7 @@ Introduction
 Cadre de l'étude
 ===========================================
 
-Cette documentation est établie dans le cadre de mon travail de diplôme de `l'Ecole Supérieure d'Informatique de Gestion <http://www.esig-jura.ch>`_ de `Delémont <https://en.wikipedia.org/wiki/Delémont>`_, et porte sur le fonctionnement logistique du système ERP Odoo V11e.
+Cette documentation est établie dans le cadre de mon travail de diplôme de `l'Ecole Supérieure d'Informatique de Gestion <http://www.esig-jura.ch>`_ de `Delémont <https://en.wikipedia.org/wiki/Delémont>`_  (:index:`ESIG`) , et porte sur le fonctionnement logistique du système ERP Odoo V11e.
 
 Etudier le fonctionnement logistique d'un système ERP et proposer des solutions d'amélioration nécessite une expérience terrain importante, sachant que l'équivalent sur un corps humain reviendrait à étudier l'ensemble du système sanguin, probablement quelques mécanismes du système nerveux, voire le système limphatique.
 
@@ -20,7 +20,7 @@ Longtemps, on a par exemple soigné la fièvre par `des saignées <https://fr.wi
 
         `Pratique d'une saignée (Crédit Wikipedia) <https://commons.wikimedia.org/wiki/File:Pratique_d'une_saignée.jpg>`_
 
-Les systèmes de gestion ERP d'aujourd'hui, que ce soit le plus imposant `SAP <https://www.sap.com/index.html>`_ ou `le "petit" Odoo <https://www.odoo.com>`_, ne sont pas vraiment encore intelligents. Ils appliquent des schémas préconçus (paramètrage) suite à des actions d'utilisateurs ou de job réguliers. Quelques algorithmes bien pensés permettent aux différents reponsables métiers d'obtenir une vue en temps réel sur la situation de l'entreprise.
+Les systèmes de gestion ERP d'aujourd'hui, que ce soit le plus imposant `SAP <https://www.sap.com/index.html>`_ ou `le "petit" Odoo <https://www.odoo.com>`_, ne sont pas vraiment encore intelligents. Ils appliquent des schémas préconçus (:index:`paramètrage`) suite à des actions d'utilisateurs ou de job planifiés. Quelques algorithmes bien pensés permettent aux différents reponsables métiers d'obtenir une vue en temps réel sur la situation de l'entreprise.
 
 Mais lorsque le système ERP subit une "poussée de fièvre", il est important de rechercher la cause profonde du problème, et d'appliquer la solution avec tact et parcimonie, surtout lorsque le système est en production. La saignée doit être évitée à tout prix. Cela est également le cas lorsque des fonctionnalités doivent être ajoutées au système.
 
@@ -34,9 +34,9 @@ Le mandat du travail de diplôme porte sur l'analyse du système logistique "tel
 
 A mon sens, la bonne pratique en terme d'implémentation et d'adaptation d'un ERP à une entreprise est :
 
-    #. Etude et compréhension de la philosophie du système ERP
-    #. Etude et compréhension des besoins du client en terme de gestion, au sens large
-    #. Identification des objets du système ERP répondant aux besoins
+    #. Etudier et comprendre la philosophie du système ERP
+    #. Etudier et comprendre les besoins du client en terme de gestion, au sens large
+    #. Identifier les objets du système ERP répondant aux besoins
     #. Vérifier si les flux entre les objets répondent aux exigences
 
 Si ce n'est pas le cas, nous aurons le choix entre :
@@ -53,7 +53,7 @@ Si ce n'est pas le cas, nous aurons le choix entre :
 
 Vu l'étendue d'un système tel que SAP, il est rare de devoir coder au coeur du système, mais cela est plus fréquent en périphérie. Sur un système tel que Odoo, cela est plus fréquent, vu que le nombre d'objets à disposition est plus restreint.
 
-Dans tous les cas, on privilériera autant que faire ce peu d'éviter de coder - même si cela est parfois tentant. Ces ajouts de code n'étant pas connus de l'éditeur, il peuvent fragiliser la cohérence du système, et certainement ralentir les montées de version, puisque l'ensemble des flux devront être revalidé.
+Dans tous les cas, on privilériera autant que faire ce peu d'éviter de coder - même si cela est parfois tentant. Ces ajouts de code n'étant pas connus de l'éditeur, il peuvent fragiliser la cohérence du système, et certainement ralentir les montées de version, puisque l'ensemble des flux devront être revalidé, avec un soin particulier pour ces éléments ajoutés.
 
 Ne pas coder implique par contre une connaissance parfaite et large des capacités de l'outil en terme de paramètrage. Egalement, on ne peut pas se satisfaire d'un flux qui fonctionne parfaitement... Une modification peut avoir provoqué un dommage collatéral sur le flux voisin.
 
@@ -77,7 +77,27 @@ La logistique, les opérations, la fabrication
 
 Dans le cadre de ce travail, nous vérifierons si le système Odoo permet à une entreprise manufacturière de fournir des biens industriels à un client, en s'approvisionnant en matière premières, en les transformant, en les stockant et en les livrant.
 
-Nous nous intéresserons principalement aux flux, à la transformation et au stockage des articles. Nous regrouperons l'ensemble de ces activités sous le terme générique d'**opérations**. Nous associerons le terme **fabrication** ou **manufacturing** aux opérations de transformation d'éléments vers un composé de nature différente.
+Nous nous intéresserons principalement aux :index:`flux`, à la :index:`transformation` et au :index:`stockage` des articles. Nous regrouperons l'ensemble de ces activités sous le terme générique d'**opérations**. Nous associerons le terme **fabrication** ou **manufacturing** aux opérations de transformation d'éléments vers un composé de nature différente.
+
+.. admonition:: Odoo, Open Source et utilisateurs
+
+    :index:`Odoo` est un système ERP pour les PME, développé par Odoo SA en Belgique. La base du système est constitué de modules de base ou optionnels Open Source (Community). Une version Enterprise ajoute des fonctionnalités par des modules supplémentaires et un support de l'éditeur contre paiement.
+
+    Une communauté :index:`OCA` :index:`Odoo Community Association` propose et structure des modules complémentaires Open Source.
+
+    Les principales technologies sur lesquelles s'appuie Odoo sont des standards Open Source éprouvés, notamment :
+
+        - Système d'exploitation Linux
+        - Base de données `PostgreSQL <https://www.postgresql.org>`_
+        - Language `Python 3 <https://www.python.org>`_
+        - Un `Mapping objet-relationnel (ORM) <https://www.odoo.com/documentation/11.0/reference/orm.html#common-orm-methods>`_ comme proxy entre la base de données et le code/interface 
+        - Languages et frameworks Web (HTML, CSS, Javascript, Bootstrap) pour l'interface
+        - `API XMLRPC <https://www.odoo.com/documentation/11.0/webservices/odoo.html>`_ ou JSONRPC pour l'interfaçage et communication avec des systèmes externes
+        - Longpolling pour la communication interne et le chat
+
+    De part la nature ouverte du système, tout un chacun peut créer gratuitement **sa propre installation** en suivant la `documentation d'installation <https://www.odoo.com/documentation/11.0/setup/install.html>`_ de l'éditeur. Il suffit de disposer d'un `petit serveur Linux <https://www.odoo.yenthevg.com/installing-configuring-odoo-digitalocean/>`_, de type VPS par exemple. Le code communautaire est disponible sur les `serveurs de Github.com. <https://github.com/odoo/odoo>`_
+
+    Si ce travail porte sur une **utilisation professionnelle** d'Odoo, quelques éléments d'informations seront fournis de manière vulgarisée dans la mesure du possible à l'attention d'un **public moins aguerri**. Je pense ici notamment **aux étudiants en informatiques**, pour qui l'approche initiale d'un système ERP n'est pas aisée.
 
 Avant de nous lancer dans l'étude à proprement parler, nous allons encore définir quelques éléments de compréhension. 
 
@@ -95,7 +115,7 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
 
    Intéressons nous maintenant à la forme littérale de cette phrase...
 
-    - On apprend tout d'abord que pour pour fabriquer une omelette, il faut des oeufs. 
+    - On apprend tout d'abord que pour pour fabriquer une omelette, il faut des oeufs !
     
     On ne nous dit pas toutefois combien d'oeufs sont nécessaire, ni le temps de cuisson pour que l'on puisse parler d'omelette. En cuisine, la méthode d'obtention d'une omelette s'appelle ``une recette``.
 
@@ -106,13 +126,16 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
 
         `Recette d'une omelette simple (Crédit https://www.cuisineaz.com) <https://www.cuisineaz.com/recettes/omelette-simple-56045.aspx>`_
 
-    On réalise que pour cuisiner (fabriquer) une omelette de qualité et de taille satisfaisante pour **une personne**, il faut des ingrédients dans **une quantité bien déterminée**.
+    On réalise que pour cuisiner (fabriquer) une omelette de qualité et de taille satisfaisante pour **une personne**, il faut des ingrédients dans **une quantité** (30) et **unité de quantité** (grammes) bien déterminée.
 
-    D'autre part, la préparation des ingrédients se réalise en **deux étapes distinctes** impliquant des ``opérations`` précises (Etape 1 : Battez..., Etape 2 : Faites chauffer...).
+    D'autre part, la préparation des ingrédients se réalise en **deux étapes distinctes** impliquant des ``opérations`` précises :
+    
+        - Etape 1 : Battez...,
+        - Etape 2 : Faites chauffer..0.
 
     Cette recette est probablement suffisante pour le repas du soir, mais dans un milieu industriel, elle est insuffisamment précise. En effet, on obtiendra une omellette de taille différente selon la taille des oeufs.
 
-    En termes industriels, on parlera de ``fabrication en process`` dans le cas où le produit est obtenu sur la base d'une formule ou d'une recette, et que les ingrédients qui le compose ne peuvent plus être facilement dissociés après la transformation. Par opposition, on parlera de ``fabrication discrète`` lorsque le produit obtenu peut être facilement touché, vu ou compté. 
+    En termes industriels, on parlera de ``fabrication en process`` dans le cas où le produit est obtenu sur la base d'une formule ou d'une recette, et que les ingrédients qui le compose ne peuvent plus être facilement dissociés après la transformation. Par opposition, on parlera de ``fabrication discrète`` lorsque le produit obtenu peut être facilement touché, vu ou compté, voire redémonté.
 
     Dans l'étude, nous nous intéresserons **uniquement à la fabrication discrète**, qui traite de produits tels que montres, voitures, machines, etc.
     
@@ -136,7 +159,7 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
 
         - ``le flux poussé`` : dans ce contexte, une prévision de vente va engendrer l'approvisionnement de tous les composants nécessaires, lesquels vont remonter progressivement vers les stocks de produits semi-finis, puis vers les stocks de produits finis. Dans le cas de notre omelette, si le délai de fabrication est de trois jours, il faudra prévoir ce que nous voulons manger dans trois jours, et nous y tenir ! 
 
-        - ``le flux tiré`` : dans cette situation, le réapprovisionnement n'a lieu que lorsque le stock a été consommé. Dans le cas de notre omelette, cela signifie dans nous maintenons un petit stock d'oeufs (``stock intermédiaire``), et que lorsque nous les utilisons pour réaliser une omelette, nous recomplétons ce stock. On parlera également de ``juste-à-temps`` lorsque le stock arrive au moment de sa consommation. Notre omelette est cuisinée juste-à-temps pour le repas du soir !
+        - ``le flux tiré`` : dans cette situation, le réapprovisionnement n'a lieu que lorsque le stock a été consommé. Dans le cas de notre omelette, cela signifie dans nous maintenons un petit stock d'oeufs (``stock intermédiaire``), et que lorsque nous les utilisons pour réaliser une omelette, nous recomplétons ce stock, par un appel sur un stock à disposition chez le fournisseur. On parlera également de ``juste-à-temps`` lorsque le stock arrive au moment de sa consommation. Notre omelette est cuisinée juste-à-temps pour le repas du soir !
 
     Bon appétit !  
 
