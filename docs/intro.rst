@@ -107,7 +107,7 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
         `Recette d'une omelette simple (Crédit https://www.cuisineaz.com) <https://www.cuisineaz.com/recettes/omelette-simple-56045.aspx>`_
 
     On réalise que pour cuisiner (fabriquer) une omelette de qualité et de taille satisfaisante pour **une personne**, il faut des ingrédients dans **une quantité bien déterminée**.
-     
+
     D'autre part, la préparation des ingrédients se réalise en **deux étapes distinctes** impliquant des ``opérations`` précises (Etape 1 : Battez..., Etape 2 : Faites chauffer...).
 
     Cette recette est probablement suffisante pour le repas du soir, mais dans un milieu industriel, elle est insuffisamment précise. En effet, on obtiendra une omellette de taille différente selon la taille des oeufs.
@@ -150,13 +150,4 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
 
 
 
-
-
-       
-
-========================
-Licence
-========================
-
-.. raw:: html
-   :file: licence.html
+.. include:: ./licence.rst

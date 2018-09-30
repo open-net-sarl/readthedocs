@@ -48,7 +48,7 @@ Schéma des flux
 
     :download:`Routes et Emplacements de stock (pdf) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.pdf>` :download:`(svg) <./media/Odoo11_Routes_et_Emplacements_de_stock_V02.svg>`
 
-:index:`Emplacement fournisseur`: Un emplacement virtuel qui correspond à l'emplacement d'origine des produits issus de vos fournisseurs.
+:Emplacement fournisseur: Un emplacement virtuel qui correspond à l'emplacement d'origine des produits issus de vos fournisseurs.
 :Vue: Emplacement virtuel utilisé pour créer des structures hiérarchiques pour votre entrepôt, en agrégeant ses emplacements enfants ; ne peut pas directement contenir de produits.
 :Emplacement interne: L'emplacement physique dans votre entrepôt.
 :Emplacement client: Un emplacement virtuel qui correspond à l'emplacement de destination des produits envoyés à vos clients.
