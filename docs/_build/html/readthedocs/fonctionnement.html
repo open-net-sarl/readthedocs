@@ -93,9 +93,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#schema-des-flux">Schéma des flux</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#les-flux-internes-et-externes">Les flux internes et externes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#les-flux-internes-et-externes">Les flux internes et externes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#les-routes-et-les-regles">Les routes et les règles</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#les-routes">Les routes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#les-regles">Les règles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#les-regles">Les règles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#la-methode-d-approvisionnement">La méthode d’approvisionnement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sequence-de-determination-de-la-route-et-de-la-regle-applicable">Séquence de détermination de la route et de la règle applicable</a></li>
 </ul>
 </li>
 </ul>
@@ -193,11 +198,11 @@
 <div class="section" id="emplacement-de-stock-stock-location">
 <h3><span class="target" id="index-3"></span>Emplacement de stock (<span class="target" id="index-4"></span>Stock Location)<a class="headerlink" href="#emplacement-de-stock-stock-location" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Un emplacement est un espace spécifique dans l’entrepôt. Il peut être considéré comme une sous-localisation de l’entrepôt, ça peut être une étagère, un plancher, une allée, etc… Par conséquent, un emplacement fait partie d’un seul entrepôt et il est impossible de relier un emplacement à plusieurs entrepôts. Il est configurer autant d’emplacements que souhaité dans un entrepôt.</p>
-<p>Ce schéma décrit les emplacements de stock de stocks standards du système Odoo de base, avec leurs parents respectifs (Société, Entrepôt, Emplacement parent). Les routes entre ces emplacements sont également spécifiées.</p>
-<p>Deux entrepôts de la même société peuvent échanger du stock en passant par une zone de transit, appartenant à la société, mais hors entrepôt.</p>
 </div>
 <div class="section" id="schema-des-flux">
 <h3>Schéma des flux<a class="headerlink" href="#schema-des-flux" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ce schéma décrit les emplacements de stock de stocks standards du système Odoo de base, avec leurs parents respectifs (Société, Entrepôt, Emplacement parent). Les routes entre ces emplacements sont également spécifiées.</p>
+<p>Deux entrepôts de la même société peuvent échanger du stock en passant par une zone de transit, appartenant à la société, mais hors entrepôt.</p>
 <blockquote>
 <div><div class="figure align-center">
 <img alt="Routes et Emplacements de stock" src="../_images/routes_et_emplacements01_map_paysage.png" />
@@ -235,17 +240,74 @@
 </div>
 <div class="section" id="les-flux-internes-et-externes">
 <h2>Les flux internes et externes<a class="headerlink" href="#les-flux-internes-et-externes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ce schéma représente une vue détaillée des <span class="target" id="index-5"></span>flux opérationnels internes et externes, y compris achats, inter-entrepôts et production. Les <span class="target" id="index-6"></span>points de contrôle (QC) ainsi que les tests associés sont indiqués.</p>
 <blockquote>
 <div><div class="figure align-center">
 <a class="reference internal image-reference" href="../_images/routes_et_qualite01.png"><img alt="Routes et Qualite" src="../_images/routes_et_qualite01.png" style="width: 820.4px; height: 439.59999999999997px;" /></a>
 </div>
-<p><a class="reference download internal" href="../_downloads/Odoo11_Qualite_et_routes_V01.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Routes</span> <span class="pre">et</span> <span class="pre">Qualité</span> <span class="pre">(pdf)</span></code></a></p>
+<p><a class="reference download internal" href="../_downloads/Odoo11_Qualite_et_routes_V01.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Routes</span> <span class="pre">et</span> <span class="pre">Qualité</span> <span class="pre">(pdf)</span></code></a> <a class="reference download internal" href="../_downloads/Odoo11_Qualite_et_routes_V01.svg" download=""><code class="xref download docutils literal notranslate"><span class="pre">(svg)</span></code></a></p>
 </div></blockquote>
+</div>
+<div class="section" id="les-routes-et-les-regles">
+<h2>Les routes et les règles<a class="headerlink" href="#les-routes-et-les-regles" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="les-routes">
 <h3>Les routes<a class="headerlink" href="#les-routes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Sous Odoo, une <span class="target" id="index-7"></span>route représente en ensemble de <span class="target" id="index-8"></span>règles d’approvisionnement (<span class="target" id="index-9"></span>Procurement Rules) et de <span class="target" id="index-10"></span>règles de flux poussés (<span class="target" id="index-11"></span>Push Rules).</p>
+<p>Des routes peuvent être associées à un produit par :</p>
+<blockquote>
+<div><ul class="simple">
+<li>association directe (ficher produit)</li>
+<li>association par la catégorie du produit</li>
+<li>dans le poste de la commande client</li>
+</ul>
+</div></blockquote>
+<p>Ce schéma représente une vue des emplacements de stock et routes/règles pour un flux transverse «&nbsp;Commande client&nbsp;» vers «&nbsp;Achat&nbsp;» et retour. Il décrit les différentes étapes pour la réalisation du besoin du client.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="Fonctionnement des routes" src="../_images/WH_Fonctionnement_des_Routes.png" />
+</div>
+<p><a class="reference download internal" href="../_downloads/WH_Fonctionnement_des_Routes.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Fonctionnement</span> <span class="pre">des</span> <span class="pre">routes</span> <span class="pre">(pdf)</span></code></a> <a class="reference download internal" href="../_downloads/WH_Fonctionnement_des_Routes.svg" download=""><code class="xref download docutils literal notranslate"><span class="pre">(svg)</span></code></a></p>
+</div></blockquote>
 </div>
 <div class="section" id="les-regles">
 <h3>Les règles<a class="headerlink" href="#les-regles" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les règles sont définies au niveau des routes. Il en existe deux types :</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>Règles d’approvisionnement (Procurement Rules)</dt>
+<dd>Ce type de règle crée un besoin (move_lines) entre l’emplacement de stock «&nbsp;demandeur&nbsp;» (à l’origine du besoin - <span class="target" id="index-12"></span>Emplacement d’origine) et un emplacement «&nbsp;fournisseur&nbsp;» (qui comblera le besoin <span class="target" id="index-13"></span>Emplacement d’approvisionnement).
+Lorsque l’emplacement «&nbsp;fournisseur&nbsp;» obtient du stock pour ce besoin, il le «&nbsp;pousse&nbsp;» vers son origine.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Règles de flux poussés (Push Rules)</dt>
+<dd>Ce type de règle permet de pousser du stock d’un emplacement à un autre, sans besoin préalable. Il peut être automatique ou nécessité une action manuelle.</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+<div class="section" id="la-methode-d-approvisionnement">
+<h4>La méthode d’approvisionnement<a class="headerlink" href="#la-methode-d-approvisionnement" title="Lien permanent vers ce titre">¶</a></h4>
+<p>La <span class="target" id="index-14"></span>méthode d’approvisionnement défini si une règle :</p>
+<blockquote>
+<div><ul class="simple">
+<li>«&nbsp;cascade&nbsp;» son besoin automatiquement en amont (<span class="target" id="index-15"></span>Créer un approvisionnement) à une règle ayant un emplacement d’origine identique à son emplacement d’approvisionnement (MTO), ou</li>
+<li>puise dans le stock de l’emplacement d’approvisionnement (<span class="target" id="index-16"></span>Prendre du stock - MTS).</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="sequence-de-determination-de-la-route-et-de-la-regle-applicable">
+<h3>Séquence de détermination de la route et de la règle applicable<a class="headerlink" href="#sequence-de-determination-de-la-route-et-de-la-regle-applicable" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La route sélectionnée et l’emplacement du besoin détermineront les règles applicables. Il peut toutefois arriver que des routes et règles soient en concurrence pour le même binôme «&nbsp;Emplacement demandeur&nbsp;» et «&nbsp;Emplacement fournisseur&nbsp;». Dans ce cas, c’est la règle avec le No de séquence le plus petit qui sera sélectionnée.</p>
+<p>Le schéma ci-dessous décrit cette séquence :</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="Determination de la règle applicable" src="../_images/WH_Routes_Procurement_Rule_Determination.png" />
+</div>
+<p><a class="reference download internal" href="../_downloads/WH_Routes_Procurement_Rule_Determination.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Séquence</span> <span class="pre">de</span> <span class="pre">détermination</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">règle</span> <span class="pre">application</span> <span class="pre">(pdf)</span></code></a> <a class="reference download internal" href="../_downloads/WH_Routes_Procurement_Rule_Determination.svg" download=""><code class="xref download docutils literal notranslate"><span class="pre">(svg)</span></code></a></p>
+</div></blockquote>
 </div>
 </div>
 </div>

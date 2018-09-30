@@ -34,3 +34,28 @@ Routes et emplacements de stock
     .. figure:: ./img/routes_et_emplacements01_portrait.png
         :alt: Routes et Emplacements de stock
         :align: center
+
+.. raw:: latex
+
+    \clearpage
+
+=================================================
+Fonctionnement des routes
+=================================================
+
+    .. figure:: ./img/WH_Fonctionnement_des_Routes_Portrait.png
+        :alt: Fonctionnement des routes
+        :align: center
+
+
+.. raw:: latex
+
+    \clearpage
+
+=================================================
+Séquence de détermination de la règle applicable
+=================================================
+
+    .. figure:: ./img/WH_Routes_Procurement_Rule_Determination_Portrait.png
+        :alt: Sequence de Determination de la regle applicable
+        :align: center

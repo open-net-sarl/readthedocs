@@ -35,12 +35,12 @@ Un entrepôt est le bâtiment où les articles sont stockés.
 
 Un emplacement est un espace spécifique dans l'entrepôt. Il peut être considéré comme une sous-localisation de l'entrepôt, ça peut être une étagère, un plancher, une allée, etc... Par conséquent, un emplacement fait partie d'un seul entrepôt et il est impossible de relier un emplacement à plusieurs entrepôts. Il est configurer autant d'emplacements que souhaité dans un entrepôt.
 
+Schéma des flux
+---------------
+
 Ce schéma décrit les emplacements de stock de stocks standards du système Odoo de base, avec leurs parents respectifs (Société, Entrepôt, Emplacement parent). Les routes entre ces emplacements sont également spécifiées.
 
 Deux entrepôts de la même société peuvent échanger du stock en passant par une zone de transit, appartenant à la société, mais hors entrepôt. 
-
-Schéma des flux
----------------
 
     .. figure:: ../img/routes_et_emplacements01_map_paysage.png
         :alt: Routes et Emplacements de stock
@@ -63,16 +63,73 @@ Schéma des flux
 Les flux internes et externes
 =====================================================
 
+Ce schéma représente une vue détaillée des :index:`flux opérationnels` internes et externes, y compris achats, inter-entrepôts et production. Les :index:`points de contrôle` (QC) ainsi que les tests associés sont indiqués.
+
     .. figure:: ../img/routes_et_qualite01.png
         :scale: 70%
         :alt: Routes et Qualite
         :align: center
 
-    :download:`Routes et Qualité (pdf) <./media/Odoo11_Qualite_et_routes_V01.pdf>`
+    :download:`Routes et Qualité (pdf) <./media/Odoo11_Qualite_et_routes_V01.pdf>` :download:`(svg) <./media/Odoo11_Qualite_et_routes_V01.svg>`
+
+================================
+Les routes et les règles
+================================
+
 
 Les routes
--------------------------
+---------------------------------
+
+Sous Odoo, une :index:`route` représente en ensemble de :index:`règles d'approvisionnement` (:index:`Procurement Rules`) et de :index:`règles de flux poussés` (:index:`Push Rules`).
+
+
+Des routes peuvent être associées à un produit par :
+
+    - association directe (ficher produit)
+    - association par la catégorie du produit
+    - dans le poste de la commande client
+
+
+Ce schéma représente une vue des emplacements de stock et routes/règles pour un flux transverse "Commande client" vers "Achat" et retour. Il décrit les différentes étapes pour la réalisation du besoin du client.
+
+    .. figure:: ../img/WH_Fonctionnement_des_Routes.png
+        :alt: Fonctionnement des routes
+        :align: center
+
+    :download:`Fonctionnement des routes (pdf) <./media/WH_Fonctionnement_des_Routes.pdf>` :download:`(svg) <./media/WH_Fonctionnement_des_Routes.svg>`
+
 
 Les règles
 -------------------------
+
+Les règles sont définies au niveau des routes. Il en existe deux types :
+
+    #. Règles d'approvisionnement (Procurement Rules)
+        Ce type de règle crée un besoin (move_lines) entre l'emplacement de stock "demandeur" (à l'origine du besoin - :index:`Emplacement d'origine`) et un emplacement "fournisseur" (qui comblera le besoin :index:`Emplacement d'approvisionnement`). 
+        Lorsque l'emplacement "fournisseur" obtient du stock pour ce besoin, il le "pousse" vers son origine.
+
+    #. Règles de flux poussés (Push Rules)
+        Ce type de règle permet de pousser du stock d'un emplacement à un autre, sans besoin préalable. Il peut être automatique ou nécessité une action manuelle.
+
+
+La méthode d'approvisionnement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+La :index:`méthode d'approvisionnement` défini si une règle :
+
+    - "cascade" son besoin automatiquement en amont (:index:`Créer un approvisionnement`) à une règle ayant un emplacement d'origine identique à son emplacement d'approvisionnement (MTO), ou 
+    - puise dans le stock de l'emplacement d'approvisionnement (:index:`Prendre du stock` - MTS). 
+
+Séquence de détermination de la route et de la règle applicable
+------------------------------------------------------------------------------
+
+La route sélectionnée et l'emplacement du besoin détermineront les règles applicables. Il peut toutefois arriver que des routes et règles soient en concurrence pour le même binôme "Emplacement demandeur" et "Emplacement fournisseur". Dans ce cas, c'est la règle avec le No de séquence le plus petit qui sera sélectionnée.
+
+Le schéma ci-dessous décrit cette séquence :
+
+    .. figure:: ../img/WH_Routes_Procurement_Rule_Determination.png
+        :alt: Determination de la règle applicable
+        :align: center
+
+    :download:`Séquence de détermination de la règle application (pdf) <./media/WH_Routes_Procurement_Rule_Determination.pdf>` :download:`(svg) <./media/WH_Routes_Procurement_Rule_Determination.svg>`
 
