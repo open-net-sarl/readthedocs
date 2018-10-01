@@ -56,6 +56,7 @@ Routes et Qualité (avec points de contrôle)
 
     .. figure:: ./img/routes_et_qualite01_portrait.png
         :alt: Routes et qualite
+        :scale: 70%
         :align: center
 
 
@@ -86,7 +87,7 @@ Séquence de détermination de la règle applicable
 
     .. figure:: ./img/WH_Routes_Procurement_Rule_Determination_Portrait.png
         :alt: Sequence de Determination de la regle applicable
-        :scale: 80%
+        :scale: 60%
         :align: center
 
 .. raw:: latex
