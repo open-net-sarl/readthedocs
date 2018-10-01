@@ -59,3 +59,15 @@ Séquence de détermination de la règle applicable
     .. figure:: ./img/WH_Routes_Procurement_Rule_Determination_Portrait.png
         :alt: Sequence de Determination de la regle applicable
         :align: center
+
+.. raw:: latex
+
+    \clearpage
+
+=================================================
+Situation AS-IS
+=================================================
+
+    .. figure:: ./img/Odoo11_Process_AS-IS_portrait.png
+        :alt: Situation AS-IS
+        :align: center

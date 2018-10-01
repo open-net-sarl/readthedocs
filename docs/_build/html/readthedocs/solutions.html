@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Solutions à étudier &mdash; Documentation Etude Odoo V11 Opérations 1.0</title>
+  <title>Résultats de l’étude &mdash; Documentation Etude Odoo V11 Opérations 1.0</title>
   
 
   
@@ -81,12 +81,16 @@
               <p class="caption"><span class="caption-text">Table des matières</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operations.html">Les opérations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fonctionnement.html">Le fonctionnement logistique du système Odoo V11</a></li>
 <li class="toctree-l1"><a class="reference internal" href="study.html">Etude et tests</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Solutions à étudier</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">OCA - Odoo Community Association</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Odoomrp.com</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Résultats de l’étude</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#faiblesses-identifiees">Faiblesses identifiées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modules-complementaires-a-etudier">Modules complémentaires à étudier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">OCA - Odoo Community Association</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Odoomrp.com</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#decisions">Décisions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../annexes.html">Annexes</a></li>
@@ -136,7 +140,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Solutions à étudier</li>
+      <li>Résultats de l’étude</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,10 +159,56 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="solutions-a-etudier">
-<h1>Solutions à étudier<a class="headerlink" href="#solutions-a-etudier" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="resultats-de-l-etude">
+<h1>Résultats de l’étude<a class="headerlink" href="#resultats-de-l-etude" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="faiblesses-identifiees">
+<h2>Faiblesses identifiées<a class="headerlink" href="#faiblesses-identifiees" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Afin de pouvoir évaluer et qualifier l’importance des faiblesses identifiées durant les tests, j’ai décidé de dessiner un flux transversal client - fournisseur, que j’ai <strong>arbitrairement</strong> considéré comme standard.</p>
+<p>Ceci m’a permis de placer sur ce schéma les points faibles identifiés, de les qualifier et de comparer ma compréhension de la criticité du point avec celle de mon mandant.</p>
+<p>Voici cette carte, que nous appellerons «&nbsp;Situation AS-IS&nbsp;» (telle quelle), puisque c’est l’état constaté du système actuel. Chaque triangle rouge identifie une faiblesse constatée et précises l’élément du flux qu’elle impacte.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="Situation as-is" src="../_images/Odoo11_Process_AS-IS.png" />
+</div>
+<p><a class="reference download internal" href="../_downloads/Odoo11_Process_AS-IS.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Situation</span> <span class="pre">AS-IS</span> <span class="pre">(pdf)</span></code></a> <a class="reference download internal" href="../_downloads/Odoo11_Process_AS-IS.svg" download=""><code class="xref download docutils literal notranslate"><span class="pre">(svg)</span></code></a></p>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">X01 - Annulation de commande de vente MTO:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">En cas d’annulation d’un poste de commande de vente pour un article MTO, les ordres d’approvisionnement non confirmés ne sont pas supprimés (alors que c’était le cas en V10).</p>
+<p>N.B. Il s’agit probablement d’un paramètrage manquant en version 11 standard, facilement réactivable.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">S01 - Détermination du délai de livraison:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">S’il y a du stock disponible, le délai est immédiat. Dans le cas contraire, il correspond au délai standard de produit. Le système ne considère pas les entrées planifiées entre ces deux échéances.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">X02 - Règle de réapprovisionnement:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Si le produit à un emplacement déterminé n’a pas de règle de réapprovisionnement, le système ne déclenche ni approvisionnement, ni avertissement en cas de besoin.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">M01 - Planification:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Le système génère des RFQ ou MO dans le passé lorsque le délai ne peut plus être tenu (MTS, MTO et MPS-Make).  Mais pas en MPS-Buy !</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">B01 - Sélection du fournisseur:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Le système prend systématiquement le premier fournisseur de la fiche produit, même si les conditions ne s’appliquent pas !</p>
+<p>N.B. Ce fonctionnement est probablement souhaité par l’éditeur, afin de permettre au client de déterminer sa propre séquence de sélection du meilleur fournisseur. Mais un filtre portant notamment sur les dates de validité serait probablement judicieux.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">B02 - Planification:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first last">Le système n’informe / ne corrige pas les éléments dépendants en cas de nouveau délai.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="modules-complementaires-a-etudier">
+<h2>Modules complémentaires à étudier<a class="headerlink" href="#modules-complementaires-a-etudier" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="id1">
-<h2><a class="reference external" href="https://odoo-community.org">OCA - Odoo Community Association</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<h3><a class="reference external" href="https://odoo-community.org">OCA - Odoo Community Association</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/OCA/manufacture">manufacture</a></li>
 <li><a class="reference external" href="https://github.com/OCA/manufacture-reporting">manufacture-reporting</a></li>
@@ -168,11 +218,24 @@
 </ul>
 </div>
 <div class="section" id="id2">
-<h2><a class="reference external" href="http://www.odoomrp.com">Odoomrp.com</a><a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h2>
+<h3><a class="reference external" href="http://www.odoomrp.com">Odoomrp.com</a><a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/odoomrp/odoomrp-utils">odoomrp-utils</a></li>
 <li><a class="reference external" href="https://github.com/odoomrp/odoomrp-wip">odoomrp-wip</a></li>
 </ul>
+</div>
+</div>
+<div class="section" id="decisions">
+<h2>Décisions<a class="headerlink" href="#decisions" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Après discussion avec le mandant, nous décidons de résoudre prioritairement le point S01, car :</p>
+<blockquote>
+<div><ul class="simple">
+<li>On sait que les clients sont habitués à être livré rapidement. Lors d’une demande client, si un produit n’est pas livrable du stock, la probabilité que le client n’achète pas augmente proportionnellement au délai d’attente. Offir à ce moment un délai standard, c’est mieux que rien, mais si du stock pourrait être disponible entre ces deux dates, autant en profiter et maximiser les chances de transformation en commande ferme.</li>
+<li>La solution au point S01 signifie l’ajout d’une possibilité de <strong>questionner l’arbre des encours d’approvisionnement</strong> et des stocks intermédiaires,  afin d’obtenir un délai plausible.</li>
+<li>Cette solution présuppose que les éléments d’approvisionnement sont placés judicieusement dans le temps. Or, les faiblesses constatées M01 et B02 précisent justement que le système est en difficulté dans ce domaine.</li>
+<li>Nous allons donc également au préalable résoudre les points M01 et B02, par un <strong>module de recalcul des dates des éléments d’approvisionnement en cours</strong>.</li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 

@@ -133,7 +133,7 @@ On réalise que pour cuisiner (fabriquer) une omelette de qualité et de taille 
 D'autre part, la préparation des ingrédients se réalise en **deux étapes distinctes** impliquant des ``opérations`` précises :
 
     - Etape 1 : Battez...,
-    - Etape 2 : Faites chauffer..0.
+    - Etape 2 : Faites chauffer...
 
 Cette recette est probablement suffisante pour le repas du soir, mais dans un milieu industriel, elle est insuffisamment précise. En effet, on obtiendra une omellette de taille différente selon la taille des oeufs.
 

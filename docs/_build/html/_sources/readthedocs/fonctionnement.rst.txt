@@ -14,7 +14,7 @@ Le processus intégré depuis la vente
     :scale: 60%
     :align: center
 
-:download:`Processus logistique et commercial standard (pdf)  <./media/Odoo11_Process_AS-IS.pdf>`  :download:`(png)  <./media/Odoo11_Process_AS-IS.png>`  :download:`(svg)  <./media/Odoo11_Process_AS-IS.svg>`
+:download:`Processus logistique et commercial standard (pdf)  <./media/Odoo11_Process_AS-IS.pdf>`  :download:`(png)  <../img/processus_commercial_standard01.png>`  :download:`(svg)  <./media/Odoo11_Process_AS-IS.svg>`
 
 Démonstration
 -----------------
