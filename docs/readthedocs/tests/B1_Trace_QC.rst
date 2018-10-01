@@ -82,6 +82,8 @@ Résultats
 
         `Vidéo de démonstration du flux <https://nextcloud.open-net.ch/index.php/s/HYtXQgAbbLfz3pw>`_
 
+        :download:`Vidéo de démonstration du flux (MP4) <../test_results/B1_Trace_QC/OdooV11_traceability01.mp4>`
+
         .. figure:: ../../img/traceability01.png
             :alt: Rapport de traçabilité
             :align: center

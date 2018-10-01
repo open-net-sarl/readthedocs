@@ -149,6 +149,5 @@ Les scénarios de test
 
     tests/A1_MTS
     tests/A1_MTO
-    tests/A1_MTO_MTS
     tests/B1_Trace_QC
     tests/C1_MPS
