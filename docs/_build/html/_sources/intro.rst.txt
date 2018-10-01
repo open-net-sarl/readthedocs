@@ -72,32 +72,34 @@ Une autre question se pose : si la phase de compréhension se prolonge, je ne po
 
 
 ======================================================
+Odoo, Open Source et utilisateurs
+======================================================
+
+:index:`Odoo` est un système ERP pour les PME, développé par Odoo SA en Belgique. La base du système est constituée de modules de base et optionnels `Open Source <https://www.odoo.com/documentation/user/11.0/legal/licenses/licenses.html#licenses>`_ (Community). Une version Enterprise ajoute des fonctionnalités par des modules supplémentaires et un support de l'éditeur contre paiement.
+
+Une communauté :index:`OCA` :index:`Odoo Community Association` propose et structure des modules complémentaires Open Source.
+
+Les principales technologies sur lesquelles s'appuie Odoo sont des standards Open Source éprouvés, notamment :
+
+    - Système d'exploitation Linux
+    - Base de données `PostgreSQL <https://www.postgresql.org>`_
+    - Language `Python 3 <https://www.python.org>`_
+    - Un `Mapping objet-relationnel (ORM) <https://www.odoo.com/documentation/11.0/reference/orm.html#common-orm-methods>`_ comme proxy entre la base de données et le code/interface 
+    - Languages et frameworks Web (HTML, CSS, Javascript, Bootstrap) pour l'interface
+    - `API XMLRPC <https://www.odoo.com/documentation/11.0/webservices/odoo.html>`_ ou JSONRPC pour l'interfaçage et communication avec des systèmes externes
+    - Longpolling pour la communication interne et le chat
+
+De part la nature ouverte du système, tout un chacun peut créer gratuitement **sa propre installation** en suivant la `documentation d'installation <https://www.odoo.com/documentation/11.0/setup/install.html>`_ de l'éditeur. Il suffit de disposer d'un `petit serveur Linux <https://www.odoo.yenthevg.com/installing-configuring-odoo-digitalocean/>`_, de type VPS par exemple. Le code communautaire est disponible sur les `serveurs de Github.com. <https://github.com/odoo/odoo>`_
+
+Si ce travail porte sur une **utilisation professionnelle** d'Odoo, quelques éléments d'informations seront fournis de manière vulgarisée dans la mesure du possible à l'attention d'un **public moins aguerri**. Je pense ici notamment **aux étudiants en informatiques**, pour qui l'approche initiale d'un système ERP n'est pas aisée.
+
+======================================================
 La logistique, les opérations, la fabrication
 ======================================================
 
 Dans le cadre de ce travail, nous vérifierons si le système Odoo permet à une entreprise manufacturière de fournir des biens industriels à un client, en s'approvisionnant en matière premières, en les transformant, en les stockant et en les livrant.
 
 Nous nous intéresserons principalement aux :index:`flux`, à la :index:`transformation` et au :index:`stockage` des articles. Nous regrouperons l'ensemble de ces activités sous le terme générique d'**opérations**. Nous associerons le terme **fabrication** ou **manufacturing** aux opérations de transformation d'éléments vers un composé de nature différente.
-
-.. admonition:: Odoo, Open Source et utilisateurs
-
-    :index:`Odoo` est un système ERP pour les PME, développé par Odoo SA en Belgique. La base du système est constitué de modules de base ou optionnels Open Source (Community). Une version Enterprise ajoute des fonctionnalités par des modules supplémentaires et un support de l'éditeur contre paiement.
-
-    Une communauté :index:`OCA` :index:`Odoo Community Association` propose et structure des modules complémentaires Open Source.
-
-    Les principales technologies sur lesquelles s'appuie Odoo sont des standards Open Source éprouvés, notamment :
-
-        - Système d'exploitation Linux
-        - Base de données `PostgreSQL <https://www.postgresql.org>`_
-        - Language `Python 3 <https://www.python.org>`_
-        - Un `Mapping objet-relationnel (ORM) <https://www.odoo.com/documentation/11.0/reference/orm.html#common-orm-methods>`_ comme proxy entre la base de données et le code/interface 
-        - Languages et frameworks Web (HTML, CSS, Javascript, Bootstrap) pour l'interface
-        - `API XMLRPC <https://www.odoo.com/documentation/11.0/webservices/odoo.html>`_ ou JSONRPC pour l'interfaçage et communication avec des systèmes externes
-        - Longpolling pour la communication interne et le chat
-
-    De part la nature ouverte du système, tout un chacun peut créer gratuitement **sa propre installation** en suivant la `documentation d'installation <https://www.odoo.com/documentation/11.0/setup/install.html>`_ de l'éditeur. Il suffit de disposer d'un `petit serveur Linux <https://www.odoo.yenthevg.com/installing-configuring-odoo-digitalocean/>`_, de type VPS par exemple. Le code communautaire est disponible sur les `serveurs de Github.com. <https://github.com/odoo/odoo>`_
-
-    Si ce travail porte sur une **utilisation professionnelle** d'Odoo, quelques éléments d'informations seront fournis de manière vulgarisée dans la mesure du possible à l'attention d'un **public moins aguerri**. Je pense ici notamment **aux étudiants en informatiques**, pour qui l'approche initiale d'un système ERP n'est pas aisée.
 
 Avant de nous lancer dans l'étude à proprement parler, nous allons encore définir quelques éléments de compréhension. 
 

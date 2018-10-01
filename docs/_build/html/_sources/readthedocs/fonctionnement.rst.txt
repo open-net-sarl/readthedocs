@@ -76,7 +76,6 @@ Ce schéma représente une vue détaillée des :index:`flux opérationnels` inte
 Les routes et les règles
 ================================
 
-
 Les routes
 ---------------------------------
 
@@ -133,3 +132,14 @@ Le schéma ci-dessous décrit cette séquence :
 
     :download:`Séquence de détermination de la règle application (pdf) <./media/WH_Routes_Procurement_Rule_Determination.pdf>` :download:`(svg) <./media/WH_Routes_Procurement_Rule_Determination.svg>`
 
+================================================
+La fabrication
+================================================
+
+Sous Odoo et dans sa version la plus simple, la fabrication est matérialisée par des documents de type MO (:index:`Manufacturing Order`). Ces documents permettent principalement de réserver les composants dans les quantités nécessaires pour la réalisation du produit transformé.
+
+Ces :index:`ordres de fabrication` peuvent être créées manuellement, mais dans la majorité des cas, ils seront générés automatiquement par un besoin posé sur un produit associé avec la route "Manufacture" et une :index:`nomenclature`.
+
+Si la saisie des temps et le routage entre départements est nécessaires, on créera en plus au préalable des :index:`gammes opératoires` détaillant la :index:`séquence des opérations`, et pour chaque :index:`opération`, les composants à associer et le :index:`poste de travail` concerné.
+
+Associée à la nomenclature du produit à fabriquer/assembler, la gamme opératoire permettra d'établir des ordres de travail en relation avec un ordre de fabrication et notamment de timbrer les temps de réalisation, mais également de définir des points de contrôle entre les étapes (Module QC).
