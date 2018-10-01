@@ -115,63 +115,63 @@ Avant de nous lancer dans l'étude à proprement parler, nous allons encore déf
 
         `Oeuf cassé (Crédit bioalaune.com) <https://www.bioalaune.com/fr/actualite-bio/12067/non-au-gaspillage-alimentaire-cinq-astuces-utiliser-blancs-doeufs>`_
 
-   Intéressons nous maintenant à la forme littérale de cette phrase...
+Intéressons nous maintenant à la forme littérale de cette phrase...
 
-    - On apprend tout d'abord que pour pour fabriquer une omelette, il faut des oeufs !
-    
-    On ne nous dit pas toutefois combien d'oeufs sont nécessaire, ni le temps de cuisson pour que l'on puisse parler d'omelette. En cuisine, la méthode d'obtention d'une omelette s'appelle ``une recette``.
+- On apprend tout d'abord que pour pour fabriquer une omelette, il faut des oeufs !
 
-    .. figure:: ./img/recette_omelette.png
-        :alt: Recette d'une omelette simple
-        :scale: 70%
+On ne nous dit pas toutefois combien d'oeufs sont nécessaire, ni le temps de cuisson pour que l'on puisse parler d'omelette. En cuisine, la méthode d'obtention d'une omelette s'appelle ``une recette``.
+
+.. figure:: ./img/recette_omelette.png
+    :alt: Recette d'une omelette simple
+    :scale: 70%
+    :align: center
+
+    `Recette d'une omelette simple (Crédit https://www.cuisineaz.com) <https://www.cuisineaz.com/recettes/omelette-simple-56045.aspx>`_
+
+On réalise que pour cuisiner (fabriquer) une omelette de qualité et de taille satisfaisante pour **une personne**, il faut des ingrédients dans **une quantité** (30) et **unité de quantité** (grammes) bien déterminée.
+
+D'autre part, la préparation des ingrédients se réalise en **deux étapes distinctes** impliquant des ``opérations`` précises :
+
+    - Etape 1 : Battez...,
+    - Etape 2 : Faites chauffer..0.
+
+Cette recette est probablement suffisante pour le repas du soir, mais dans un milieu industriel, elle est insuffisamment précise. En effet, on obtiendra une omellette de taille différente selon la taille des oeufs.
+
+En termes industriels, on parlera de ``fabrication en process`` dans le cas où le produit est obtenu sur la base d'une formule ou d'une recette, et que les ingrédients qui le compose ne peuvent plus être facilement dissociés après la transformation. Par opposition, on parlera de ``fabrication discrète`` lorsque le produit obtenu peut être facilement touché, vu ou compté, voire redémonté.
+
+Dans l'étude, nous nous intéresserons **uniquement à la fabrication discrète**, qui traite de produits tels que montres, voitures, machines, etc.
+
+Pour fabriquer un objet discret, nous parlerons de ``nomenclatures`` (Bill of Materials - BOM en anglais), qui précisent que pour fabriquer 1 voiture, il faut :
+
+    - 1 chassis,
+    - 1 moteur et
+    - 4 roues.
+
+et de ``gammes de fabrication`` ou ``gammes opératoires`` (routings en anglais), qui définissent la séquence des opérations d'usinage/assemblage, les ``ressources`` nécessaires (machines, outils, main d'oeuvre, qualitification, énergie, fluides, etc.).
+
+Une ``nomenclature multi-niveaux`` est le résultat de nomenclatures "imbriquées". Par exemple, pour produire une voiture, il faut un moteur, lui même composé d'un bloc moteur et de 4 pistons. On comprendra ainsi qu'avant de pouvoir assembler la voiture, il aura fallu au préalable obtenir de l'acier pour réaliser les 4 pistons, puis assembler les pistons et le bloc pour former le moteur, et finalement assembler le moteur, les roues et le chassis.
+
+Cette séquence est jalonnée de contraintes, de nature temporelles, physiques (volumes, quantité disponible, ressources) et financières (cash flow).  
+
+On comprendra également que l'on ne produira pas forcément les moteurs dans les mêmes quantités (``taille de lot``) et au même endroit que les voitures. Ainsi les notions de ``stockage``, d' ``emplacement de stock``, d' ``entrepôt`` et de ``transport`` interviennent.
+
+D'autre part, une entreprise maximisera ses ventes en proposant ses produits à sa clientèle, à un délai acceptable par celle-ci. Elle pourra être temptée d'anticiper les besoins des clients et de produire et stocker massivement. Mais dans ce cas, si les prévisions s'avèrent surévaluées, le stock deviendra obsolète et ne pourra plus être vendu.
+
+Pour éviter cela, on recherchera constamment à minimiser les valeurs en stock, en standardisant les produits et en approvisionnant au dernier moment. Citons encore deux techniques fondamentales d'approvisionnement :
+
+    - ``le flux poussé`` : dans ce contexte, une prévision de vente va engendrer l'approvisionnement de tous les composants nécessaires, lesquels vont remonter progressivement vers les stocks de produits semi-finis, puis vers les stocks de produits finis. Dans le cas de notre omelette, si le délai de fabrication est de trois jours, il faudra prévoir ce que nous voulons manger dans trois jours, et nous y tenir ! 
+
+    - ``le flux tiré`` : dans cette situation, le réapprovisionnement n'a lieu que lorsque le stock a été consommé. Dans le cas de notre omelette, cela signifie dans nous maintenons un petit stock d'oeufs (``stock intermédiaire``), et que lorsque nous les utilisons pour réaliser une omelette, nous recomplétons ce stock, par un appel sur un stock à disposition chez le fournisseur. On parlera également de ``juste-à-temps`` lorsque le stock arrive au moment de sa consommation. Notre omelette est cuisinée juste-à-temps pour le repas du soir !
+
+Bon appétit !  
+
+
+    .. figure:: ./img/omelette.jpg
+        :alt: Omelette
+        :scale: 60%
         :align: center
 
-        `Recette d'une omelette simple (Crédit https://www.cuisineaz.com) <https://www.cuisineaz.com/recettes/omelette-simple-56045.aspx>`_
-
-    On réalise que pour cuisiner (fabriquer) une omelette de qualité et de taille satisfaisante pour **une personne**, il faut des ingrédients dans **une quantité** (30) et **unité de quantité** (grammes) bien déterminée.
-
-    D'autre part, la préparation des ingrédients se réalise en **deux étapes distinctes** impliquant des ``opérations`` précises :
-    
-        - Etape 1 : Battez...,
-        - Etape 2 : Faites chauffer..0.
-
-    Cette recette est probablement suffisante pour le repas du soir, mais dans un milieu industriel, elle est insuffisamment précise. En effet, on obtiendra une omellette de taille différente selon la taille des oeufs.
-
-    En termes industriels, on parlera de ``fabrication en process`` dans le cas où le produit est obtenu sur la base d'une formule ou d'une recette, et que les ingrédients qui le compose ne peuvent plus être facilement dissociés après la transformation. Par opposition, on parlera de ``fabrication discrète`` lorsque le produit obtenu peut être facilement touché, vu ou compté, voire redémonté.
-
-    Dans l'étude, nous nous intéresserons **uniquement à la fabrication discrète**, qui traite de produits tels que montres, voitures, machines, etc.
-    
-    Pour fabriquer un objet discret, nous parlerons de ``nomenclatures`` (Bill of Materials - BOM en anglais), qui précisent que pour fabriquer 1 voiture, il faut :
-
-        - 1 chassis,
-        - 1 moteur et
-        - 4 roues.
-
-    et de ``gammes de fabrication`` ou ``gammes opératoires`` (routings en anglais), qui définissent la séquence des opérations d'usinage/assemblage, les ``ressources`` nécessaires (machines, outils, main d'oeuvre, qualitification, énergie, fluides, etc.).
-
-    Une ``nomenclature multi-niveaux`` est le résultat de nomenclatures "imbriquées". Par exemple, pour produire une voiture, il faut un moteur, lui même composé d'un bloc moteur et de 4 pistons. On comprendra ainsi qu'avant de pouvoir assembler la voiture, il aura fallu au préalable obtenir de l'acier pour réaliser les 4 pistons, puis assembler les pistons et le bloc pour former le moteur, et finalement assembler le moteur, les roues et le chassis.
-
-    Cette séquence est jalonnée de contraintes, de nature temporelles, physiques (volumes, quantité disponible, ressources) et financières (cash flow).  
-
-    On comprendra également que l'on ne produira pas forcément les moteurs dans les mêmes quantités (``taille de lot``) et au même endroit que les voitures. Ainsi les notions de ``stockage``, d' ``emplacement de stock``, d' ``entrepôt`` et de ``transport`` interviennent.
-
-    D'autre part, une entreprise maximisera ses ventes en proposant ses produits à sa clientèle, à un délai acceptable par celle-ci. Elle pourra être temptée d'anticiper les besoins des clients et de produire et stocker massivement. Mais dans ce cas, si les prévisions s'avèrent surévaluées, le stock deviendra obsolète et ne pourra plus être vendu.
-
-    Pour éviter cela, on recherchera constamment à minimiser les valeurs en stock, en standardisant les produits et en approvisionnant au dernier moment. Citons encore deux techniques fondamentales d'approvisionnement :
-
-        - ``le flux poussé`` : dans ce contexte, une prévision de vente va engendrer l'approvisionnement de tous les composants nécessaires, lesquels vont remonter progressivement vers les stocks de produits semi-finis, puis vers les stocks de produits finis. Dans le cas de notre omelette, si le délai de fabrication est de trois jours, il faudra prévoir ce que nous voulons manger dans trois jours, et nous y tenir ! 
-
-        - ``le flux tiré`` : dans cette situation, le réapprovisionnement n'a lieu que lorsque le stock a été consommé. Dans le cas de notre omelette, cela signifie dans nous maintenons un petit stock d'oeufs (``stock intermédiaire``), et que lorsque nous les utilisons pour réaliser une omelette, nous recomplétons ce stock, par un appel sur un stock à disposition chez le fournisseur. On parlera également de ``juste-à-temps`` lorsque le stock arrive au moment de sa consommation. Notre omelette est cuisinée juste-à-temps pour le repas du soir !
-
-    Bon appétit !  
-
-    
-        .. figure:: ./img/omelette.jpg
-            :alt: Omelette
-            :scale: 60%
-            :align: center
-
-            `Omelette (Crédit bbcgoodfood.com) <https://www.bbcgoodfood.com/recipes/1669/ultimate-french-omelette>`_
+        `Omelette (Crédit bbcgoodfood.com) <https://www.bbcgoodfood.com/recipes/1669/ultimate-french-omelette>`_
 
 
 

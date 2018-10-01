@@ -140,6 +140,8 @@ Sous Odoo et dans sa version la plus simple, la fabrication est matérialisée p
 
 Ces :index:`ordres de fabrication` peuvent être créées manuellement, mais dans la majorité des cas, ils seront générés automatiquement par un besoin posé sur un produit associé avec la route "Manufacture" et une :index:`nomenclature`.
 
-Si la saisie des temps et le routage entre départements est nécessaires, on créera en plus au préalable des :index:`gammes opératoires` détaillant la :index:`séquence des opérations`, et pour chaque :index:`opération`, les composants à associer et le :index:`poste de travail` concerné.
+Si la saisie des temps et le routage entre départements sont nécessaires, on créera en plus au préalable des :index:`gammes opératoires` détaillant la :index:`séquence des opérations`, et pour chaque :index:`opération`, les composants à associer et le :index:`poste de travail` concerné.
 
-Associée à la nomenclature du produit à fabriquer/assembler, la gamme opératoire permettra d'établir des ordres de travail en relation avec un ordre de fabrication et notamment de timbrer les temps de réalisation, mais également de définir des points de contrôle entre les étapes (Module QC).
+Associée à la nomenclature du produit à fabriquer/assembler, la gamme opératoire permettra d'établir des ordres de travail en relation avec un ordre de fabrication et notamment de timbrer les temps de réalisation.
+
+En version Entreprise, des documents multimédia (instruction de montage, dessins techniques, etc. ) pourront être associés aux opérations, et des points de contrôle pourront être définis afin de vérifier que les opérations ont bien été réalisées conformément aux spécifications (Module QC).
