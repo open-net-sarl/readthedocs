@@ -10,6 +10,10 @@ Dans le but d'assurer une certaine **cohérence des tests** à réaliser, nous u
 
 :index:`OBSF` commercialise des **vélos haut de gamme**, principalement en Europe. Elle a été fondée il y a 5 ans par trois ingénieurs passionnés de cyclisme.
 
+    .. figure:: ../img/Test_Product_Bike.png
+        :alt: Velo OBSF
+        :align: center
+
 Les grands avantages des vélos OBSF sont :
 
     - une conception robuste
@@ -19,6 +23,10 @@ Les grands avantages des vélos OBSF sont :
 Les ventes connaissent une **forte croissance** depuis la création de la société. Ceci nécessite un **suivi constant des ressources** disponibles, notamment du **cash-flow** et de la **disponibilité des produits**. 
 
 Les **vélos de montagne** sont fabriqué entièrement **dans les ateliers de Romont et de Bussigny**. Les **vélos de ville**, par contre, sont **entièrement sous-traités** en Asie en mode "Fabless Manufacturing".
+
+    .. figure:: ../img/bike_bom01.png
+        :alt: Nomenclature Velo OBSF
+        :align: center
 
 Les dirigeants de :index:`OBSF` souhaitent acquérir un nouveau système de gestion pour leur entreprise. Ils nous ont contacté avec un cahier des charges précis, en nous demandant d'éviter spécifiquement les points faibles de leur ancien système ERP :  
 
@@ -142,4 +150,5 @@ Les scénarios de test
     tests/A1_MTS
     tests/A1_MTO
     tests/A1_MTO_MTS
+    tests/B1_Trace_QC
     tests/C1_MPS

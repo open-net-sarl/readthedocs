@@ -91,12 +91,13 @@
 <li class="toctree-l3"><a class="reference internal" href="tests/A1_MTS.html">1. A1 - MTS : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tests/A1_MTO.html">2. A1 - MTO : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tests/A1_MTO_MTS.html">3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tests/C1_MPS.html">4. C1 - MPS : Approvisionnement basé sur une prévision de vente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests/B1_Trace_QC.html">4. B1 : Quality Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests/C1_MPS.html">5. C1 - MPS : Approvisionnement basé sur une prévision de vente</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="solutions.html">Solutions à étudier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solutions.html">Résultats de l’étude</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../annexes.html">Annexes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
 </ul>
@@ -169,6 +170,11 @@
 <h2>La société fictive «&nbsp;Open Bike SF&nbsp;»<a class="headerlink" href="#la-societe-fictive-open-bike-sf" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Dans le but d’assurer une certaine <strong>cohérence des tests</strong> à réaliser, nous utiliserons un <strong>jeu de test</strong> basé sur une <strong>société fictive «&nbsp;Open Bike SF (OBSF)&nbsp;»</strong>.</p>
 <p><span class="target" id="index-0"></span>OBSF commercialise des <strong>vélos haut de gamme</strong>, principalement en Europe. Elle a été fondée il y a 5 ans par trois ingénieurs passionnés de cyclisme.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="Velo OBSF" src="../_images/Test_Product_Bike.png" />
+</div>
+</div></blockquote>
 <p>Les grands avantages des vélos OBSF sont :</p>
 <blockquote>
 <div><ul class="simple">
@@ -179,6 +185,11 @@
 </div></blockquote>
 <p>Les ventes connaissent une <strong>forte croissance</strong> depuis la création de la société. Ceci nécessite un <strong>suivi constant des ressources</strong> disponibles, notamment du <strong>cash-flow</strong> et de la <strong>disponibilité des produits</strong>.</p>
 <p>Les <strong>vélos de montagne</strong> sont fabriqué entièrement <strong>dans les ateliers de Romont et de Bussigny</strong>. Les <strong>vélos de ville</strong>, par contre, sont <strong>entièrement sous-traités</strong> en Asie en mode «&nbsp;Fabless Manufacturing&nbsp;».</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="Nomenclature Velo OBSF" src="../_images/bike_bom01.png" />
+</div>
+</div></blockquote>
 <p>Les dirigeants de <span class="target" id="index-1"></span>OBSF souhaitent acquérir un nouveau système de gestion pour leur entreprise. Ils nous ont contacté avec un cahier des charges précis, en nous demandant d’éviter spécifiquement les points faibles de leur ancien système ERP :</p>
 </div>
 <div class="section" id="a-approvisionnement-juste-a-temps">
@@ -358,14 +369,24 @@ C2) Et comment ce système MPS réagit en cas de</p>
 <li class="toctree-l2"><a class="reference internal" href="tests/A1_MTO_MTS.html#commentaire">3.7. Commentaire</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tests/C1_MPS.html">4. C1 - MPS : Approvisionnement basé sur une prévision de vente</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#objectifs-du-test">4.1. Objectifs du test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#conditions-de-test">4.2. Conditions de test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#conditions-de-reussite">4.3. Conditions de réussite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#procedure-de-test">4.4. Procédure de test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#resultats">4.5. Résultats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#faiblesses-identifiees">4.6. Faiblesses identifiées</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#commentaire">4.7. Commentaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests/B1_Trace_QC.html">4. B1 : Quality Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests/B1_Trace_QC.html#objectifs-du-test">4.1. Objectifs du test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/B1_Trace_QC.html#conditions-de-test">4.2. Conditions de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/B1_Trace_QC.html#conditions-de-reussite">4.3. Conditions de réussite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/B1_Trace_QC.html#procedure-de-test">4.4. Procédure de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/B1_Trace_QC.html#resultats">4.5. Résultats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/B1_Trace_QC.html#faiblesses-identifiees">4.6. Faiblesses identifiées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/B1_Trace_QC.html#commentaire">4.7. Commentaire</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests/C1_MPS.html">5. C1 - MPS : Approvisionnement basé sur une prévision de vente</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#objectifs-du-test">5.1. Objectifs du test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#conditions-de-test">5.2. Conditions de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#conditions-de-reussite">5.3. Conditions de réussite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#procedure-de-test">5.4. Procédure de test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#resultats">5.5. Résultats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#faiblesses-identifiees">5.6. Faiblesses identifiées</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests/C1_MPS.html#commentaire">5.7. Commentaire</a></li>
 </ul>
 </li>
 </ul>

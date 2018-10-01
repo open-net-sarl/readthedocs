@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. C1 - MPS : Approvisionnement basé sur une prévision de vente &mdash; Documentation Etude Odoo V11 Opérations 1.0</title>
+  <title>5. C1 - MPS : Approvisionnement basé sur une prévision de vente &mdash; Documentation Etude Odoo V11 Opérations 1.0</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Solutions à étudier" href="../solutions.html" />
-    <link rel="prev" title="3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock" href="A1_MTO_MTS.html" /> 
+    <link rel="next" title="Résultats de l’étude" href="../solutions.html" />
+    <link rel="prev" title="4. B1 : Quality Control" href="B1_Trace_QC.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -81,7 +81,6 @@
               <p class="caption"><span class="caption-text">Table des matières</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operations.html">Les opérations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fonctionnement.html">Le fonctionnement logistique du système Odoo V11</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../study.html">Etude et tests</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../study.html#la-societe-fictive-open-bike-sf">La société fictive «&nbsp;Open Bike SF&nbsp;»</a></li>
@@ -92,21 +91,22 @@
 <li class="toctree-l3"><a class="reference internal" href="A1_MTS.html">1. A1 - MTS : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="A1_MTO.html">2. A1 - MTO : Approvisionnement «&nbsp;Juste à temps&nbsp;» MTO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="A1_MTO_MTS.html">3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">4. C1 - MPS : Approvisionnement basé sur une prévision de vente</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#objectifs-du-test">4.1. Objectifs du test</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conditions-de-test">4.2. Conditions de test</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conditions-de-reussite">4.3. Conditions de réussite</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#procedure-de-test">4.4. Procédure de test</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#resultats">4.5. Résultats</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#faiblesses-identifiees">4.6. Faiblesses identifiées</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#commentaire">4.7. Commentaire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="B1_Trace_QC.html">4. B1 : Quality Control</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5. C1 - MPS : Approvisionnement basé sur une prévision de vente</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#objectifs-du-test">5.1. Objectifs du test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conditions-de-test">5.2. Conditions de test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conditions-de-reussite">5.3. Conditions de réussite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#procedure-de-test">5.4. Procédure de test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resultats">5.5. Résultats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faiblesses-identifiees">5.6. Faiblesses identifiées</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#commentaire">5.7. Commentaire</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../solutions.html">Solutions à étudier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solutions.html">Résultats de l’étude</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../annexes.html">Annexes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../licence.html">Licence</a></li>
 </ul>
@@ -156,7 +156,7 @@
         
           <li><a href="../study.html">Etude et tests</a> &raquo;</li>
         
-      <li>4. C1 - MPS : Approvisionnement basé sur une prévision de vente</li>
+      <li>5. C1 - MPS : Approvisionnement basé sur une prévision de vente</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -176,9 +176,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="c1-mps-approvisionnement-base-sur-une-prevision-de-vente">
-<h1>4. C1 - MPS : Approvisionnement basé sur une prévision de vente<a class="headerlink" href="#c1-mps-approvisionnement-base-sur-une-prevision-de-vente" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>5. C1 - MPS : Approvisionnement basé sur une prévision de vente<a class="headerlink" href="#c1-mps-approvisionnement-base-sur-une-prevision-de-vente" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="objectifs-du-test">
-<h2>4.1. Objectifs du test<a class="headerlink" href="#objectifs-du-test" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>5.1. Objectifs du test<a class="headerlink" href="#objectifs-du-test" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul>
 <li><p class="first">Vérifier que le système achète et fabrique au plus tard en fonction des conditions suivantes :</p>
@@ -197,7 +197,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="conditions-de-test">
-<h2>4.2. Conditions de test<a class="headerlink" href="#conditions-de-test" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>5.2. Conditions de test<a class="headerlink" href="#conditions-de-test" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul>
 <li><p class="first">Système identiques au test A1 - MTS, sauf</p>
@@ -220,7 +220,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="conditions-de-reussite">
-<h2>4.3. Conditions de réussite<a class="headerlink" href="#conditions-de-reussite" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>5.3. Conditions de réussite<a class="headerlink" href="#conditions-de-reussite" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>L’ordonnancement du produit commandé est réalisé par un calcul amont des délais cumulés de <strong>fabrication / assemblage</strong> ou <strong>achat</strong> en fonction de la date requise par le client et des stocks disponibles (en l’occurrence pas de stocks !).</li>
@@ -231,7 +231,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="procedure-de-test">
-<h2>4.4. Procédure de test<a class="headerlink" href="#procedure-de-test" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>5.4. Procédure de test<a class="headerlink" href="#procedure-de-test" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul>
 <li><p class="first">Base de données : dst-td-scenario_a1_v02-test</p>
@@ -254,7 +254,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="resultats">
-<h2>4.5. Résultats<a class="headerlink" href="#resultats" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>5.5. Résultats<a class="headerlink" href="#resultats" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><p><a class="reference download internal" href="../../_downloads/Resultats_Test_A1_MTO.xlsx" download=""><code class="xref download docutils literal notranslate"><span class="pre">Fichier</span> <span class="pre">de</span> <span class="pre">résultats</span></code></a></p>
 <ul class="simple">
@@ -267,7 +267,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="faiblesses-identifiees">
-<h2>4.6. Faiblesses identifiées<a class="headerlink" href="#faiblesses-identifiees" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>5.6. Faiblesses identifiées<a class="headerlink" href="#faiblesses-identifiees" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference external" href="https://nextcloud.open-net.ch/index.php/s/HaqniNCeQogjq36">[A1_MTO_F01]</a> Dans le cas où la seule fiche fournisseur indique une quantité minimale d’achat supérieure au besoin MTO, le système détermine correctement le fournisseur, mais pas le délai, ni le prix. Ceci a pour conséquence que l’achat pourrait être tardif et engendrer un retard de livraison.</li>
@@ -283,7 +283,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="commentaire">
-<h2>4.7. Commentaire<a class="headerlink" href="#commentaire" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>5.7. Commentaire<a class="headerlink" href="#commentaire" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>Le mode de gestion Make-To-Order MTO d’Odoo est dédié au réapprovisionnement des besoins stricts. Il ne prend pas en considération les données d’une fiche fournisseur existante.</li>
@@ -300,10 +300,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../solutions.html" class="btn btn-neutral float-right" title="Solutions à étudier" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../solutions.html" class="btn btn-neutral float-right" title="Résultats de l’étude" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="A1_MTO_MTS.html" class="btn btn-neutral" title="3. A1 - MTO-MTS_V01 : Test du module OCA mrp_mto_with_stock" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="B1_Trace_QC.html" class="btn btn-neutral" title="4. B1 : Quality Control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
